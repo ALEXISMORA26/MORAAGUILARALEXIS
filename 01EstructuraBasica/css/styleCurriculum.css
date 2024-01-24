@@ -1,0 +1,341 @@
+.div {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 78px 0px 0;
+  }
+  @media (max-width: 991px) {
+    .div {
+      padding-right: 20px;
+    }
+  }
+  .div-2 {
+    margin-top: 5px;
+    width: 100%;
+    max-width: 1266px;
+  }
+  @media (max-width: 991px) {
+    .div-2 {
+      max-width: 100%;
+    }
+  }
+  .div-3 {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .div-3 {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 84%;
+    margin-left: 0px;
+  }
+  @media (max-width: 991px) {
+    .column {
+      width: 100%;
+    }
+  }
+  .div-4 {
+    display: flex;
+    margin-top: 20px;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .div-4 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .div-5 {
+    color: #000;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+    font: 400 64px Kaisei Decol, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-5 {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  .div-6 {
+    color: #000;
+    margin-top: 16px;
+    font: 400 29px Kaisei Decol, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-6 {
+      max-width: 100%;
+    }
+  }
+  .div-7 {
+    background-color: #000;
+    margin-top: 8px;
+    height: 8px;
+  }
+  @media (max-width: 991px) {
+    .div-7 {
+      max-width: 100%;
+    }
+  }
+  .column-2 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 16%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .column-2 {
+      width: 100%;
+    }
+  }
+  .img {
+    aspect-ratio: 0.87;
+    object-fit: contain;
+    object-position: center;
+    width: 185px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  @media (max-width: 991px) {
+    .img {
+      margin-top: 40px;
+    }
+  }
+  .div-8 {
+    background-color: #e6fdfd;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    margin: 37px 0 652px;
+    padding: 50px 20px 50px 80px;
+  }
+  @media (max-width: 991px) {
+    .div-8 {
+      max-width: 100%;
+      padding-left: 20px;
+      margin-bottom: 40px;
+    }
+  }
+  .div-9 {
+    margin: 8px 0 0 16px;
+  }
+  @media (max-width: 991px) {
+    .div-9 {
+      max-width: 100%;
+    }
+  }
+  .div-10 {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .div-10 {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  }
+  .column-3 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 65%;
+    margin-left: 0px;
+  }
+  @media (max-width: 991px) {
+    .column-3 {
+      width: 100%;
+    }
+  }
+  .div-11 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .div-11 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .div-12 {
+    color: #000;
+    font: 400 29px Kaisei Decol, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-12 {
+      max-width: 100%;
+    }
+  }
+  .div-13 {
+    background-color: #000;
+    margin-top: 15px;
+    height: 8px;
+  }
+  @media (max-width: 991px) {
+    .div-13 {
+      max-width: 100%;
+    }
+  }
+  .div-14 {
+    color: #000;
+    margin-top: 59px;
+    font: 400 20px Kaisei Decol, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-14 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .column-4 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 35%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .column-4 {
+      width: 100%;
+    }
+  }
+  .div-15 {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .div-15 {
+      margin-top: 40px;
+    }
+  }
+  .div-16 {
+    color: #000;
+    align-self: stretch;
+    font: 400 29px Kaisei Decol, sans-serif;
+  }
+  .div-17 {
+    background-color: #000;
+    align-self: stretch;
+    margin-top: 17px;
+    height: 8px;
+  }
+  .div-18 {
+    color: #000;
+    align-self: start;
+    max-width: 251px;
+    margin: 42px 0 0 14px;
+    font: 400 20px Kaisei Decol, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-18 {
+      margin: 40px 0 0 10px;
+    }
+  }
+  .div-19 {
+    color: #000;
+    align-self: stretch;
+    margin-top: 43px;
+    font: 400 29px Kaisei Decol, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-19 {
+      margin-top: 40px;
+    }
+  }
+  .div-20 {
+    background-color: #000;
+    align-self: stretch;
+    margin-top: 17px;
+    height: 8px;
+  }
+  .div-21 {
+    margin: 4px 0 105px 16px;
+  }
+  @media (max-width: 991px) {
+    .div-21 {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  .div-22 {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .div-22 {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  }
+  .column-5 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 70%;
+    margin-left: 0px;
+  }
+  @media (max-width: 991px) {
+    .column-5 {
+      width: 100%;
+    }
+  }
+  .div-23 {
+    color: #000;
+    margin: auto 0;
+    font: 400 20px Kaisei Decol, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-23 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .column-6 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 30%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .column-6 {
+      width: 100%;
+    }
+  }
+  .div-24 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .div-24 {
+      margin-top: 40px;
+    }
+  }
+  .div-25 {
+    color: #000;
+    font: 400 20px Kaisei Decol, sans-serif;
+  }
+  .img-2 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 73px;
+    overflow: hidden;
+    align-self: start;
+    margin-top: 30px;
+    max-width: 100%;
+  }
