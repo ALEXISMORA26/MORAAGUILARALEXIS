@@ -6,7 +6,7 @@
 body{
     background-image: url(../imagenes/fondo.jpg);
     background-size: cover;
-    color: #29eeb3;
+    color: rgb(41, 238, 179);
     display: flex;
     align-items: center;
     flex-direction: column;
