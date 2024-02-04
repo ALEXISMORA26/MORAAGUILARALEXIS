@@ -9,8 +9,10 @@ function validar(e){
     var patron = /[0-9\d .]/;
 
     var codigo = String.fromCharCode(teclado);
-
+    
     return patron.test(codigo);
+        
+    
 }
 
 
@@ -33,7 +35,7 @@ function borrarDatosEjercicio2(){
     document.formulario.venta2.value = "";
     document.formulario.venta3.value = "";
 }
-
+//
 function descuentosTienda(){
     var valor = parseInt(document.formulario.subtotal.value);
     console.log("subtotal: " + valor);
@@ -47,4 +49,57 @@ function descuentosTienda(){
 function borrarDatosEjercicio3(){
     document.formulario.sueldoI.value = "";
     document.formulario.subtotal.value = "";
+}
+// 
+function descuentosCalficacion(){
+    var valorCal = parseInt(document.formulario.cal1.value) + parseInt(document.formulario.cal2.value) + parseInt(document.formulario.cal3.value);
+    console.log("calificaciones: " + valorCal);
+    var valorExam = parseInt(document.formulario.calExamen.value);
+    console.log("examen: " + valorExam);
+    var valorTrabajo = parseInt(document.formulario.calTrabajo.value);
+    console.log("trabajo: " + valorTrabajo);
+
+    
+    var promCal = valorCal/3 * .55;
+    var promExam = valorExam * .30;
+    var promTrabajo = valorTrabajo * .15;
+    var total =  promCal + promExam + promTrabajo;
+
+    document.formulario.sueldoI.value = total;
+}
+
+function borrarDatosEjercicio4(){
+    document.formulario.cal1.value = "";
+    document.formulario.cal2.value = "";
+    document.formulario.cal3.value = "";
+    document.formulario.calExamen.value = "";
+    document.formulario.calTrabajo.value = "";
+    document.formulario.sueldoI.value = "";
+}
+//
+
+function descuentosCalficacion(){
+    var valorCal = parseInt(document.formulario.cal1.value) + parseInt(document.formulario.cal2.value) + parseInt(document.formulario.cal3.value);
+    console.log("calificaciones: " + valorCal);
+    var valorExam = parseInt(document.formulario.calExamen.value);
+    console.log("examen: " + valorExam);
+    var valorTrabajo = parseInt(document.formulario.calTrabajo.value);
+    console.log("trabajo: " + valorTrabajo);
+
+    
+    var promCal = valorCal/3 * .55;
+    var promExam = valorExam * .30;
+    var promTrabajo = valorTrabajo * .15;
+    var total =  promCal + promExam + promTrabajo;
+
+    document.formulario.sueldoI.value = total;
+}
+
+function borrarDatosEjercicio4(){
+    document.formulario.cal1.value = "";
+    document.formulario.cal2.value = "";
+    document.formulario.cal3.value = "";
+    document.formulario.calExamen.value = "";
+    document.formulario.calTrabajo.value = "";
+    document.formulario.sueldoI.value = "";
 }
