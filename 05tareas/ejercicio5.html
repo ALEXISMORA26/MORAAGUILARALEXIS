@@ -20,42 +20,18 @@
                         <table>
                             <tr>
                                 <td>
-                                    ingrese la calificacion 1:
+                                    ingrese el total de alumnas(mujeres):
                                 </td>
                                 <td>
-                                    <input type="text" name="cal1" onkeypress="return validar(event)">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    ingrese la calificacion 2:
-                                </td>
-                                <td>
-                                    <input type="text" name="cal2" onkeypress="return validar(event)">
+                                    <input type="text" name="mujeres" onkeypress="return validar(event)">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    ingrese la calificacion 3:
+                                    ingrese el total de alumnos(hombres):
                                 </td>
                                 <td>
-                                    <input type="text" name="cal3" onkeypress="return validar(event)">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    ingrese la calificacion del examen:
-                                </td>
-                                <td>
-                                    <input type="text" name="calExamen" onkeypress="return validar(event)">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    ingrese la calificacion del trabajo final:
-                                </td>
-                                <td>
-                                    <input type="text" name="calTrabajo" onkeypress="return validar(event)" >
+                                    <input type="text" name="hombres" onkeypress="return validar(event)">
                                 </td>
                             </tr>
                             <tr>
@@ -63,12 +39,20 @@
 
                                 </td>
                                 <td>
-                                    <input type="button" value="Calcular promedio" name="enviar" onclick="descuentosCalficacion()">
+                                    <input type="button" value="Calcular promedio de alumnos" name="enviar" onclick="alumnos()">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    su calificacion final es:
+                                    porcentaje de alumnas(mujeres):
+                                </td>
+                                <td>
+                                    <input type="text" readonly="readonly" name="sueldoII" id="cantidadI">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    porcentaje de alumnos(hombres):
                                 </td>
                                 <td>
                                     <input type="text" readonly="readonly" name="sueldoI" id="cantidadI">
@@ -79,7 +63,7 @@
 
                                 </td>
                                 <td>
-                                    <input type="button" value="Borrar Datos" name="borrar" onclick="borrarDatosEjercicio4()">
+                                    <input type="button" value="Borrar Datos" name="borrar" onclick="borrarDatosEjercicio5()">
                                 </td>
                             </tr>
                         </table>
