@@ -191,3 +191,44 @@ function borrarDatosEjercicio8(){
     document.formulario.num3.value = "";
     document.formulario.sueldoI.value = "";
 }
+
+//
+function horas(){
+
+    var num1 = parseInt(document.formulario.num1.value);
+    console.log("precio * hora" + num1);
+    var num2 = parseInt(document.formulario.num2.value);
+    console.log("horas trabajadas" + num2);
+
+    if(num2 <= 40){
+        var horasNormales = num2;
+        console.log("horas normales" + horasNormales);
+        var pago = horasNormales * num1;
+        document.formulario.sueldoI.value = "$" + pago;
+    }else if(num2 > 40 && num2 <= 48){
+        var horasNormales = 40;
+        console.log("horas normales" + horasNormales);
+        var horasDobles = num2-40;
+        console.log("horas dobles" + horasDobles);
+        var pago = horasNormales * num1 + (horasDobles * num1 * 2);
+        document.formulario.sueldoI.value = "$" + pago;
+    }else if(num2 > 48 ){
+        var horasNormales = 40;
+        console.log("horas normales" + horasNormales);
+        var horasDobles = 8;
+        console.log("horas dobles" + horasDobles);
+        var horasTriples = num2-48;
+        console.log("horas triples" + horasTriples);
+        var pago = horasNormales * num1 + (horasDobles * num1 * 2) + (horasDobles * num1 * 3);
+        document.formulario.sueldoI.value = "$" + pago;
+    }
+        
+    
+
+}
+
+function borrarDatosEjercicio9(){
+    document.formulario.num1.value = "";
+    document.formulario.num2.value = "";
+    document.formulario.sueldoI.value = "";
+}
