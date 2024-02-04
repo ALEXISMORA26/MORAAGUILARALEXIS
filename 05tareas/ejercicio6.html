@@ -12,7 +12,7 @@
     <div class="main-container">
         <div class="text">
             <p>
-                Formulario para calcular el porcentaje de alumnos
+                Formulario para calcular la edad de una persona
             </p>
             <div class="form">
                 <form method="post" name="formulario">
@@ -20,18 +20,10 @@
                         <table>
                             <tr>
                                 <td>
-                                    ingrese el total de alumnas(mujeres):
+                                    ingrese el año de nacimiento:
                                 </td>
                                 <td>
-                                    <input type="text" name="mujeres" onkeypress="return validar(event)">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    ingrese el total de alumnos(hombres):
-                                </td>
-                                <td>
-                                    <input type="text" name="hombres" onkeypress="return validar(event)">
+                                    <input type="date" name="año" onkeypress="return validar(event)">
                                 </td>
                             </tr>
                             <tr>
@@ -39,20 +31,12 @@
 
                                 </td>
                                 <td>
-                                    <input type="button" value="Calcular promedio de alumnos" name="enviar" onclick="alumnos()">
+                                    <input type="button" value="Calcular promedio de alumnos" name="enviar" onclick="edad()">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    porcentaje de alumnas(mujeres):
-                                </td>
-                                <td>
-                                    <input type="text" readonly="readonly" name="sueldoII" id="cantidadI">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    porcentaje de alumnos(hombres):
+                                    tu edad es:
                                 </td>
                                 <td>
                                     <input type="text" readonly="readonly" name="sueldoI" id="cantidadI">
@@ -63,7 +47,7 @@
 
                                 </td>
                                 <td>
-                                    <input type="button" value="Borrar Datos" name="borrar" onclick="borrarDatosEjercicio5()">
+                                    <input type="button" value="Borrar Datos" name="borrar" onclick="borrarDatosEjercicio6()">
                                 </td>
                             </tr>
                         </table>

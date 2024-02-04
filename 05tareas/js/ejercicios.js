@@ -100,3 +100,36 @@ function borrarDatosEjercicio5(){
     document.formulario.sueldoI.value = "";
     document.formulario.sueldoII.value = "";
 }
+
+//
+
+function edad(){
+
+    var fechaActual = new Date();
+
+    var fechaNacimiento = document.formulario.año.value;
+    var fechaNac = new Date(fechaNacimiento);
+
+    var edad = fechaActual.getFullYear() - fechaNac.getFullYear();
+      
+      // Ajusta la edad si aún no ha pasado el cumpleaños este año
+      if (fechaActual.getMonth() < fechaNac.getMonth() || 
+          (fechaActual.getMonth() === fechaNac.getMonth() && 
+          fechaActual.getDate() < fechaNac.getDate())) {
+        edad--;
+      }
+
+    console.log("fecha acual" + fechaActual);
+    console.log("fecha nacimiento" + fechaNac);
+
+    
+    
+
+    document.formulario.sueldoI.value = edad + " años";
+}
+
+function borrarDatosEjercicio6(){
+    document.formulario.año.value = "";
+    document.formulario.sueldoI.value = "";
+}
+
