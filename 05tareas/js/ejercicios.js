@@ -268,7 +268,7 @@ function utilidades(){
 
 }
 
-function borrarDatosEjercicio9(){
+function borrarDatosEjercicio10(){
     document.formulario.num1.value = "";
     document.formulario.num2.value = "";
     document.formulario.sueldoI.value = "";
