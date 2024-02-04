@@ -133,3 +133,31 @@ function borrarDatosEjercicio6(){
     document.formulario.sueldoI.value = "";
 }
 
+//
+function numeros(){
+
+    var num1 = parseInt(document.formulario.num1.value);
+    console.log("primer numero" + num1);
+    var num2 = parseInt(document.formulario.num2.value);
+    console.log("segundo numero" + num2);
+
+    if(num1 == num2){
+        var resultado = num1 * num2;
+        document.formulario.sueldoI.value = num1 + " * " +  num2 +" = " + resultado;
+    }else if(num1 > num2){
+        var resultado = num1 - num2;
+        document.formulario.sueldoI.value = num1 + " - " +  num2 +" = " + resultado;
+    }else if(num1 < num2){
+        var resultado = num1 + num2;
+        document.formulario.sueldoI.value = num1 + " + " +  num2 +" = " + resultado;
+    }
+        
+    
+
+}
+
+function borrarDatosEjercicio7(){
+    document.formulario.num1.value = "";
+    document.formulario.num2.value = "";
+    document.formulario.sueldoI.value = "";
+}
