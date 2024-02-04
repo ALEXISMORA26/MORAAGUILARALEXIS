@@ -232,3 +232,44 @@ function borrarDatosEjercicio9(){
     document.formulario.num2.value = "";
     document.formulario.sueldoI.value = "";
 }
+
+//
+function utilidades(){
+
+    var num1 = parseInt(document.formulario.num1.value);
+    console.log("total de meses trabajados: " + num1);
+    var num2 = parseInt(document.formulario.num2.value);
+    console.log("salario mensual: " + num2);
+
+    if(num1 < 12){
+        var utilidades = num2* 1.05;
+        console.log("utilidades: " + utilidades);
+        document.formulario.sueldoI.value = "$" + utilidades;
+    }else if(num1 >= 12 && num1 < 24){
+        var utilidades = num2* 1.07;
+        console.log("utilidades: " + utilidades);
+        document.formulario.sueldoI.value = "$" + utilidades;
+    }else if(num1 >= 24 && num1 < 60){
+        var utilidades = num2* 1.1;
+        console.log("utilidades: " + utilidades);
+        document.formulario.sueldoI.value = "$" + utilidades;
+    }else if(num1 >= 60 && num1 < 120){
+        var utilidades = num2* 1.15;
+        console.log("utilidades: " + utilidades);
+        document.formulario.sueldoI.value = "$" + utilidades;
+    }else if(num1 >= 120){
+        var utilidades = num2* 1.2;
+        console.log("utilidades: " + utilidades);
+        document.formulario.sueldoI.value = "$" + utilidades;
+    }
+    
+        
+    
+
+}
+
+function borrarDatosEjercicio9(){
+    document.formulario.num1.value = "";
+    document.formulario.num2.value = "";
+    document.formulario.sueldoI.value = "";
+}
