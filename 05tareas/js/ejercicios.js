@@ -161,3 +161,33 @@ function borrarDatosEjercicio7(){
     document.formulario.num2.value = "";
     document.formulario.sueldoI.value = "";
 }
+
+//
+
+function numeroMayor(){
+
+    var num1 = parseInt(document.formulario.num1.value);
+    console.log("primer numero" + num1);
+    var num2 = parseInt(document.formulario.num2.value);
+    console.log("segundo numero" + num2);
+    var num3 = parseInt(document.formulario.num3.value);
+    console.log("tercer numero" + num3);
+
+    if(num1 > num2 && num1 > num3){
+        document.formulario.sueldoI.value = num1;
+    }else if(num2 > num1 && num2 > num3){
+        document.formulario.sueldoI.value = num2;
+    }else if(num3 > num1 && num3 > num2){
+        document.formulario.sueldoI.value = num3;
+    }
+        
+    
+
+}
+
+function borrarDatosEjercicio8(){
+    document.formulario.num1.value = "";
+    document.formulario.num2.value = "";
+    document.formulario.num3.value = "";
+    document.formulario.sueldoI.value = "";
+}
