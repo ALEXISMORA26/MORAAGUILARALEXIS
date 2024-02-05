@@ -179,6 +179,8 @@ function numeroMayor(){
         document.formulario.sueldoI.value = num2;
     }else if(num3 > num1 && num3 > num2){
         document.formulario.sueldoI.value = num3;
+    } else{
+        document.formulario.sueldoI.value = num3;
     }
         
     
