@@ -4,89 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carátula</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #FFF8F2;
-  }
-  .container {
-    display: flex;
-    height: 220vh;
-  }
-  .left-panel {
-    width: 15%;
-    background-color: #0E8D5A;
-    color: white;
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 18px; /* Tamaño de texto aumentado */
-  }
-  .right-panel {
-    width: 85%;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-  h2 {
-    color: #0E8D5A;
-  }
-  .section {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-  }
-  .input-container {
-    width: calc(100% / 3);
-    padding: 10px 5px;
-    box-sizing: border-box;
-  }
-  .input-container.full-width {
-    width: 100%;
-  }
-  .checkbox-container {
-    padding: 10px 0;
-  }
-  .checkbox-container input[type="checkbox"] {
-    margin-right: 15px;
-  }
-  .checkbox-container label {
-    margin-right: 25px;
-  }
-  .button-container {
-    text-align: center;
-  }
-  .button {
-    padding: 10px 20px;
-    background-color: #0E8D5A;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .button:hover {
-    background-color: #0C6A43;
-  }
-    h2#seleccion-empaque {
-    text-align: left;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-  }
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-    vertical-align: middle;
-  }
-  th {
-    background-color: #05422a;
-    color: white;
-  }
 </style>
 </head>
 <body>
@@ -113,8 +32,8 @@
       </div>
     </div>
     <div class="right-panel">
-      <h2>INFORME DE INSPECCIÓN</h2>
-      <div class="section">
+		<h2>INFORME DE INSPECCIÓN</h2>
+		<div class="section">
         <div class="input-container">
           <label for="proveedor">Proveedor:</label>
           <select id="proveedores" name="proveedores">
@@ -127,11 +46,11 @@
           </select>
         </div>
         <div class="input-container">
-          <label for="descripcion">Descripción de la prenda:</label>
+          <label for="descripcion">*Descripción de la prenda:</label>
           <input type="text" id="descripcion" name="descripcion">
         </div>
         <div class="input-container">
-          <label for="contenido_fibra">Contenido de Fibra:</label>
+		    <label for="contenido_fibra">Contenido de Fibra:</label>
           <select id="contenido_fibra" name="contenido_fibra">
             <option value="Algodón">Algodón</option>
             <option value="Poliéster">Poliéster</option>
@@ -149,9 +68,9 @@
             <option value="Nylon + Seda">Nylon + Seda</option>
             <option value="Lana + Seda">Lana + Seda</option>
           </select>
-        </div>
+        </div>	
         <div class="input-container">
-          <label for="modelo">Modelo:</label>
+          <label for="modelo">*Modelo:</label>
           <input type="text" id="modelo" name="modelo">
         </div>
         <div class="input-container">
@@ -169,397 +88,181 @@
             <option value="Rosa">Rosa</option>
           </select>
         </div>
-        
         <div class="input-container">
-          <label for="tallas">Tallas:</label>
+          <label for="tallas">Tallas seleccionadas:</label>
           <select id="tallas" name="tallas">
             <option value="CH">CH</option>
             <option value="M">M</option>
             <option value="G">G</option>
             <option value="XL">XL</option>
-            <option value="CH, M">CH, M</option>
-            <option value="CH, G">CH, G</option>
-            <option value="CH, XL">CH, XL</option>
-            <option value="M, G">M, G</option>
-            <option value="M, XL">M, XL</option>
-            <option value="G, XL">G, XL</option>
-            <option value="CH, M, G">CH, M, G</option>
-            <option value="CH, M, XL">CH, M, XL</option>
-            <option value="CH, G, XL">CH, G, XL</option>
-            <option value="M, G, XL">M, G, XL</option>
-            <option value="CH, M, G, XL">CH, M, G, XL</option>
+            <option value="CH, M">CH,M</option>
+            <option value="CH, G">CH,G</option>
+            <option value="CH, XL">CH,XL</option>
+            <option value="M, G">M,G</option>
+            <option value="M, XL">M,XL</option>
+            <option value="G, XL">G,XL</option>
+            <option value="CH, M, G">CH,M,G</option>
+            <option value="CH, M, XL">CH,M,XL</option>
+            <option value="CH, G, XL">CH,G,XL</option>
+            <option value="M, G, XL">M,G,XL</option>
+            <option value="CH, M, G, XL">CH,M,G,XL</option>
           </select>
         </div>
         <div class="input-container">
-          <label for="fecha_inspeccion">Fecha de inspección:</label>
-          <input type="date" id="fecha_inspeccion" name="fecha_inspeccion">
+          <label for="fecha">Fecha de Inspección:</label>
+          <input type="date" id="fecha" name="fecha">
         </div>
         <div class="input-container">
-          <label for="numero_reporte">Número de reporte:</label>
+          <label for="numero_reporte">*Número de reporte: </label>
           <input type="text" id="numero_reporte" name="numero_reporte">
         </div>
         <div class="input-container">
-          <label for="marca">Marca:</label>
+          <label for="marca">*Marca:</label>
           <input type="text" id="marca" name="marca">
         </div>
         <div class="input-container">
-          <label for="departamento">Departamento:</label>
+          <label for="departamento">*Departamento:</label>
           <input type="text" id="departamento" name="departamento">
         </div>
       </div>
-
       <h2 id="seleccion-empaque">INSPECCIÓN DE EMPAQUE</h2>
-      <table>
+      <div class="section">
+        <div class="input-container">
+          <label for="total-cajas">*Total de cajas:</label>
+          <input type="number" id="total-cajas-empaque" name="total-cajas" value="1">
+        </div>
+        <div class="input-container">
+          <label for="muestreo-cajas">*Muestreo de Cajas:</label>
+          <input type="number" id="muestreo-cajas-empaque" name="muestreo-cajas" value="1">
+        </div>
+        <div class="button-container">
+          <button class="button" onclick="generarTabla()">Generar tabla</button>
+        </div>
+      </div>
+      <table id="empaque-table">
         <thead>
           <tr>
-            <th rowspan="2">Código</th>
-            <th rowspan="2">Defecto</th>
-            <th colspan="6">Cajas Inspeccionadas</th>
-            <th rowspan="2">Defectivos</th>
+			      <th>Código</th>
+			      <th>Defecto</th>
+            <th>Número de caja</th>
+            <th>Total de Defecticvos</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>
-              <select name="defecto1">
-                <option value="Caja dañada">Caja dañada</option>
-                <option value="Etiqueta de envío incorrecta">Etiqueta de envío incorrecta</option>
-                <option value="Falta de embalaje protector">Falta de embalaje protector</option>
-                <option value="Embalaje insuficiente">Embalaje insuficiente</option>
-                <option value="Caja mal sellada">Caja mal sellada</option>
-                <option value="Falta de relleno">Falta de relleno</option>
-                <option value="Dimensiones incorrectas de la caja">Dimensiones incorrectas de la caja</option>
-                <option value="Productos sueltos dentro de la caja">Productos sueltos dentro de la caja</option>
-                <option value="Inconsistencia en el empaquetado">Inconsistencia en el empaquetado</option>
-                <option value="Etiqueta de manejo ausente">Etiqueta de manejo ausente</option>
-              </select>
-              
-            </td>
-            <td><input type="text" name="caja1"></td>
-            <td><input type="text" name="caja2"></td>
-            <td><input type="text" name="caja3"></td>
-            <td><input type="text" name="caja4"></td>
-            <td><input type="text" name="caja5"></td>
-            <td><input type="text" name="caja6"></td>
-            <td><input type="text" name="defectivo1"></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>
-              <select name="defecto2">
-                <option value="Caja dañada">Caja dañada</option>
-                <option value="Etiqueta de envío incorrecta">Etiqueta de envío incorrecta</option>
-                <option value="Falta de embalaje protector">Falta de embalaje protector</option>
-                <option value="Embalaje insuficiente">Embalaje insuficiente</option>
-                <option value="Caja mal sellada">Caja mal sellada</option>
-                <option value="Falta de relleno">Falta de relleno</option>
-                <option value="Dimensiones incorrectas de la caja">Dimensiones incorrectas de la caja</option>
-                <option value="Productos sueltos dentro de la caja">Productos sueltos dentro de la caja</option>
-                <option value="Inconsistencia en el empaquetado">Inconsistencia en el empaquetado</option>
-                <option value="Etiqueta de manejo ausente">Etiqueta de manejo ausente</option>
-              </select>
-            </td>
-            <td><input type="text" name="caja1"></td>
-            <td><input type="text" name="caja2"></td>
-            <td><input type="text" name="caja3"></td>
-            <td><input type="text" name="caja4"></td>
-            <td><input type="text" name="caja5"></td>
-            <td><input type="text" name="caja6"></td>
-            <td><input type="text" name="defectivo2"></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>
-              <select name="defecto3">
-                <option value="Caja dañada">Caja dañada</option>
-                <option value="Etiqueta de envío incorrecta">Etiqueta de envío incorrecta</option>
-                <option value="Falta de embalaje protector">Falta de embalaje protector</option>
-                <option value="Embalaje insuficiente">Embalaje insuficiente</option>
-                <option value="Caja mal sellada">Caja mal sellada</option>
-                <option value="Falta de relleno">Falta de relleno</option>
-                <option value="Dimensiones incorrectas de la caja">Dimensiones incorrectas de la caja</option>
-                <option value="Productos sueltos dentro de la caja">Productos sueltos dentro de la caja</option>
-                <option value="Inconsistencia en el empaquetado">Inconsistencia en el empaquetado</option>
-                <option value="Etiqueta de manejo ausente">Etiqueta de manejo ausente</option>
-              </select>
-            </td>
-            <td><input type="text" name="caja1"></td>
-            <td><input type="text" name="caja2"></td>
-            <td><input type="text" name="caja3"></td>
-            <td><input type="text" name="caja4"></td>
-            <td><input type="text" name="caja5"></td>
-            <td><input type="text" name="caja6"></td>
-            <td><input type="text" name="defectivo3"></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>
-              <select name="defecto4">
-                <option value="Caja dañada">Caja dañada</option>
-                <option value="Etiqueta de envío incorrecta">Etiqueta de envío incorrecta</option>
-                <option value="Falta de embalaje protector">Falta de embalaje protector</option>
-                <option value="Embalaje insuficiente">Embalaje insuficiente</option>
-                <option value="Caja mal sellada">Caja mal sellada</option>
-                <option value="Falta de relleno">Falta de relleno</option>
-                <option value="Dimensiones incorrectas de la caja">Dimensiones incorrectas de la caja</option>
-                <option value="Productos sueltos dentro de la caja">Productos sueltos dentro de la caja</option>
-                <option value="Inconsistencia en el empaquetado">Inconsistencia en el empaquetado</option>
-                <option value="Etiqueta de manejo ausente">Etiqueta de manejo ausente</option>
-              </select>
-            </td>
-            <td><input type="text" name="caja1"></td>
-            <td><input type="text" name="caja2"></td>
-            <td><input type="text" name="caja3"></td>
-            <td><input type="text" name="caja4"></td>
-            <td><input type="text" name="caja5"></td>
-            <td><input type="text" name="caja6"></td>
-            <td><input type="text" name="defectivo4"></td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>
-              <select name="defecto5">
-                <option value="Caja dañada">Caja dañada</option>
-                <option value="Etiqueta de envío incorrecta">Etiqueta de envío incorrecta</option>
-                <option value="Falta de embalaje protector">Falta de embalaje protector</option>
-                <option value="Embalaje insuficiente">Embalaje insuficiente</option>
-                <option value="Caja mal sellada">Caja mal sellada</option>
-                <option value="Falta de relleno">Falta de relleno</option>
-                <option value="Dimensiones incorrectas de la caja">Dimensiones incorrectas de la caja</option>
-                <option value="Productos sueltos dentro de la caja">Productos sueltos dentro de la caja</option>
-                <option value="Inconsistencia en el empaquetado">Inconsistencia en el empaquetado</option>
-                <option value="Etiqueta de manejo ausente">Etiqueta de manejo ausente</option>
-              </select>
-            </td>
-            <td><input type="text" name="caja1"></td>
-            <td><input type="text" name="caja2"></td>
-            <td><input type="text" name="caja3"></td>
-            <td><input type="text" name="caja4"></td>
-            <td><input type="text" name="caja5"></td>
-            <td><input type="text" name="caja6"></td>
-            <td><input type="text" name="defectivo5"></td>
-          </tr>
         </tbody>
       </table>
-      
-
+		<div class="section">
+			<div class="input-container">
+			<label for="critico">Crítico:</label>
+			<select id="critico" name="critico">
+				<option value="Sin"></option>
+				<option value="AQL/AC">AQL/AC</option>
+				<option value="AQL/RE">AQL/RE</option>
+			</select>
+			</div>
+			<div class="input-container">
+				<label for="mayor">Mayor:</label>
+				<select id="mayor" name="mayor">
+					<option value="Sin"></option>
+					<option value="AQL/AC">AQL/AC</option>
+					<option value="AQL/RE">AQL/RE</option>
+				</select>
+			</div>
+		</div>
+		<div class="section">
+			<div class="input-container">
+			  <label for="aceptado">*Aceptado:</label>
+			  <input type="text" id="aceptado" name="aceptado">
+			</div>
+			<div class="input-container">
+			  <label for="rechazo">*Rechazo:</label>
+			  <input type="text" id="rechazo" name="rechazo">
+			</div>
+		</div>
+ <h2 id="seleccion-etiquetado">INSPECCIÓN DE ETIQUETADO</h2>
       <div class="section">
         <div class="input-container">
-          <label for="total-cajas">Total de cajas:</label>
-          <input type="text" id="total-cajas" name="total-cajas">
+          <label for="total-prendas">Total de prendas:</label>
+          <input type="number" id="total-prendas-etiquetado" name="total-prendas" value="1">
         </div>
-        
         <div class="input-container">
-          <label for="numero-cajas">Número de cajas:</label>
-          <input type="text" id="numero-cajas" name="numero-cajas">
+          <label for="muestreo-prendas">Muestreo de prendas:</label>
+          <input type="number" id="muestreo-prendas-etiquetado" name="muestreo-prendas" value="1">
+        </div>
+        <div class="button-container">
+          <button class="button" onclick="generarTabla2()">Generar tabla</button>
         </div>
       </div>
-      
-      <div class="section">
-        <div class="input-container">
-          <label for="critico">Crítico:</label>
-          <input type="text" id="critico" name="critico">
-        </div>
-        <div class="input-container">
-          <label for="mayor">Mayor:</label>
-          <input type="text" id="mayor" name="mayor">
-        </div>
-        <div class="input-container">
-          <label for="aceptado">Aceptado:</label>
-          <input type="text" id="aceptado" name="aceptado">
-        </div>
-        <div class="input-container">
-          <label for="rechazo">Rechazo:</label>
-          <input type="text" id="rechazo" name="rechazo">
-        </div>
-      </div>
-
-      <h2 id="seleccion-empaque">INSPECCIÓN DE ETIQUETADO</h2>
-      
-
-      <table>
+      <table id="etiquetado-table">
         <thead>
           <tr>
-            <th rowspan="2">Código</th>
-            <th rowspan="2">Defecto</th>
-            <th colspan="6">Cajas Inspeccionadas</th>
-            <th rowspan="2">Defectivos</th>
+			      <th>Código</th>
+			      <th>Defecto</th>
+            <th>Número de prenda</th>
+            <th>Total de Defectivos</th>
           </tr>
-
         </thead>
         <tbody>
-          <tr>
-            <td style="width: 50px;">1</td>
-            <td style="width: 50px;">
-              <select name="defecto1">
-                <option value="Etiqueta_incorrecta">Etiqueta incorrecta</option>
-                <option value="Información_incompleta">Información incompleta en la etiqueta</option>
-                <option value="Etiqueta_mal_posicionada">Etiqueta mal posicionada</option>
-                <option value="Letras_ilegibles">Letras ilegibles en la etiqueta</option>
-                <option value="Tamaño_de_fuente_incorrecto">Tamaño de fuente incorrecto en la etiqueta</option>
-                <option value="Inconsistencia_de_información">Inconsistencia de información en la etiqueta</option>
-                <option value="Etiqueta_desprendida">Etiqueta desprendida</option>
-                <option value="Etiqueta_mal_fijada">Etiqueta mal fijada</option>
-                <option value="Etiqueta_no_cumple_normativas">Etiqueta que no cumple con las normativas de etiquetado</option>
-                <option value="Error_en_la_composición_del_texto">Error en la composición del texto en la etiqueta</option>
-              </select>
-            </td>
-            <td style="width: 100px;"><input type="text" name="caja1"></td>
-            <td style="width: 100px;"><input type="text" name="caja2"></td>
-            <td style="width: 100px;"><input type="text" name="caja3"></td>
-            <td style="width: 100px;"><input type="text" name="caja4"></td>
-            <td style="width: 100px;"><input type="text" name="caja5"></td>
-            <td style="width: 100px;"><input type="text" name="caja6"></td>
-            <td style="width: 100px;"><input type="text" name="defectivo1"></td>
-          </tr>
-          <tr>
-            <td style="width: 50px;">2</td>
-            <td style="width: 50px;">
-              <select name="defecto2">
-                <option value="Etiqueta_incorrecta">Etiqueta incorrecta</option>
-                <option value="Información_incompleta">Información incompleta en la etiqueta</option>
-                <option value="Etiqueta_mal_posicionada">Etiqueta mal posicionada</option>
-                <option value="Letras_ilegibles">Letras ilegibles en la etiqueta</option>
-                <option value="Tamaño_de_fuente_incorrecto">Tamaño de fuente incorrecto en la etiqueta</option>
-                <option value="Inconsistencia_de_información">Inconsistencia de información en la etiqueta</option>
-                <option value="Etiqueta_desprendida">Etiqueta desprendida</option>
-                <option value="Etiqueta_mal_fijada">Etiqueta mal fijada</option>
-                <option value="Etiqueta_no_cumple_normativas">Etiqueta que no cumple con las normativas de etiquetado</option>
-                <option value="Error_en_la_composición_del_texto">Error en la composición del texto en la etiqueta</option>
-              </select>
-            </td>
-            <td style="width: 100px;"><input type="text" name="caja1"></td>
-            <td style="width: 100px;"><input type="text" name="caja2"></td>
-            <td style="width: 100px;"><input type="text" name="caja3"></td>
-            <td style="width: 100px;"><input type="text" name="caja4"></td>
-            <td style="width: 100px;"><input type="text" name="caja5"></td>
-            <td style="width: 100px;"><input type="text" name="caja6"></td>
-            <td style="width: 100px;"><input type="text" name="defectivo1"></td>
-          </tr>
-      
-          <tr>
-            <td style="width: 50px;">3</td>
-            <td style="width: 50px;">
-              <select name="defecto3">
-                <option value="Etiqueta_incorrecta">Etiqueta incorrecta</option>
-                <option value="Información_incompleta">Información incompleta en la etiqueta</option>
-                <option value="Etiqueta_mal_posicionada">Etiqueta mal posicionada</option>
-                <option value="Letras_ilegibles">Letras ilegibles en la etiqueta</option>
-                <option value="Tamaño_de_fuente_incorrecto">Tamaño de fuente incorrecto en la etiqueta</option>
-                <option value="Inconsistencia_de_información">Inconsistencia de información en la etiqueta</option>
-                <option value="Etiqueta_desprendida">Etiqueta desprendida</option>
-                <option value="Etiqueta_mal_fijada">Etiqueta mal fijada</option>
-                <option value="Etiqueta_no_cumple_normativas">Etiqueta que no cumple con las normativas de etiquetado</option>
-                <option value="Error_en_la_composición_del_texto">Error en la composición del texto en la etiqueta</option>
-              </select>
-            </td>
-            <td style="width: 100px;"><input type="text" name="caja1"></td>
-            <td style="width: 100px;"><input type="text" name="caja2"></td>
-            <td style="width: 100px;"><input type="text" name="caja3"></td>
-            <td style="width: 100px;"><input type="text" name="caja4"></td>
-            <td style="width: 100px;"><input type="text" name="caja5"></td>
-            <td style="width: 100px;"><input type="text" name="caja6"></td>
-            <td style="width: 100px;"><input type="text" name="defectivo1"></td>
-          </tr>
-          <tr>
-            <td style="width: 50px;">4</td>
-            <td style="width: 50px;">
-              <select name="defecto4">
-                <option value="Etiqueta_incorrecta">Etiqueta incorrecta</option>
-                <option value="Información_incompleta">Información incompleta en la etiqueta</option>
-                <option value="Etiqueta_mal_posicionada">Etiqueta mal posicionada</option>
-                <option value="Letras_ilegibles">Letras ilegibles en la etiqueta</option>
-                <option value="Tamaño_de_fuente_incorrecto">Tamaño de fuente incorrecto en la etiqueta</option>
-                <option value="Inconsistencia_de_información">Inconsistencia de información en la etiqueta</option>
-                <option value="Etiqueta_desprendida">Etiqueta desprendida</option>
-                <option value="Etiqueta_mal_fijada">Etiqueta mal fijada</option>
-                <option value="Etiqueta_no_cumple_normativas">Etiqueta que no cumple con las normativas de etiquetado</option>
-                <option value="Error_en_la_composición_del_texto">Error en la composición del texto en la etiqueta</option>
-              </select>
-            </td>
-            <td style="width: 100px;"><input type="text" name="caja1"></td>
-            <td style="width: 100px;"><input type="text" name="caja2"></td>
-            <td style="width: 100px;"><input type="text" name="caja3"></td>
-            <td style="width: 100px;"><input type="text" name="caja4"></td>
-            <td style="width: 100px;"><input type="text" name="caja5"></td>
-            <td style="width: 100px;"><input type="text" name="caja6"></td>
-            <td style="width: 100px;"><input type="text" name="defectivo1"></td>
-          </tr>
-          <tr>
-            <td style="width: 50px;">5</td>
-            <td style="width: 50px;">
-              <select name="defecto5">
-                <option value="Etiqueta_incorrecta">Etiqueta incorrecta</option>
-                <option value="Información_incompleta">Información incompleta en la etiqueta</option>
-                <option value="Etiqueta_mal_posicionada">Etiqueta mal posicionada</option>
-                <option value="Letras_ilegibles">Letras ilegibles en la etiqueta</option>
-                <option value="Tamaño_de_fuente_incorrecto">Tamaño de fuente incorrecto en la etiqueta</option>
-                <option value="Inconsistencia_de_información">Inconsistencia de información en la etiqueta</option>
-                <option value="Etiqueta_desprendida">Etiqueta desprendida</option>
-                <option value="Etiqueta_mal_fijada">Etiqueta mal fijada</option>
-                <option value="Etiqueta_no_cumple_normativas">Etiqueta que no cumple con las normativas de etiquetado</option>
-                <option value="Error_en_la_composición_del_texto">Error en la composición del texto en la etiqueta</option>
-              </select>
-            </td>
-            <td style="width: 100px;"><input type="text" name="caja1"></td>
-            <td style="width: 100px;"><input type="text" name="caja2"></td>
-            <td style="width: 100px;"><input type="text" name="caja3"></td>
-            <td style="width: 100px;"><input type="text" name="caja4"></td>
-            <td style="width: 100px;"><input type="text" name="caja5"></td>
-            <td style="width: 100px;"><input type="text" name="caja6"></td>
-            <td style="width: 100px;"><input type="text" name="defectivo1"></td>
-          </tr>
         </tbody>
       </table>
-      
-      <div class="section">
-        <div class="input-container">
-          <label for="total-cajas">Total de cajas:</label>
-          <input type="text" id="total-cajas" name="total-cajas">
+		<div class="section">
+			<div class="input-container">
+			<label for="critico-etiquetado">Crítico:</label>
+			<select id="critico-etiquetado" name="critico-etiquetado">
+				<option value="Sin"></option>
+				<option value="AQL/AC">AQL/AC</option>
+				<option value="AQL/RE">AQL/RE</option>
+			</select>
+			</div>
+			<div class="input-container">
+				<label for="mayor-etiquetado">Mayor:</label>
+				<select id="mayor-etiquetado" name="mayor-etiquetado">
+					<option value="Sin"></option>
+					<option value="AQL/AC">AQL/AC</option>
+					<option value="AQL/RE">AQL/RE</option>
+				</select>
+			</div>
+		</div>
+		<div class="section">
+			<div class="input-container">
+			  <label for="aceptado-etiquetado">*Aceptado:</label>
+			  <input type="text" id="aceptado-etiquetado" name="aceptado-etiquetado">
+			</div>
+			<div class="input-container">
+			  <label for="rechazo-etiquetado">*Rechazo:</label>
+			  <input type="text" id="rechazo-etiquetado" name="rechazo-etiquetado">
+			</div>
+		</div>
+    <h2 id="seleccion-empaque">ESTATUS FINAL</h2>
+    <div class="section">
+			<div class="input-container">
+			  <label for="aceptado-etiquetado">Aceptado:</label>
+			  <input type="text" id="aceptado-etiquetado" name="aceptado-etiquetado">
+			</select>
+			</div>
+			<div class="input-container">
+			  <label for="rechazo-etiquetado">Rechazo:</label>
+			  <input type="text" id="rechazo-etiquetado" name="rechazo-etiquetado">
+			</div>
+		</div>
+		<div class="section">
+			<div class="input-container">
+			  <label for="firma_proveedor">fIRMA DEL PROVEEDOR____________________________________:</label>
+			</div>
+			<div class="input-container">
+			  <label for="firma_inspector">FIRMA DEL INSPECTOR_________________________________:</label>
+				</div>
+    </div>
+    <div class="section">
+      <div class="input-container">
+        <div class="button-container">
+          <a href="index.html"><button class="button">Volver a la página principal</button></a>
+          <button class="button" onclick="window.print()">Imprimir Documento</button>
         </div>
-        
-        <div class="input-container">
-          <label for="numero-cajas">Número de cajas:</label>
-          <input type="text" id="numero-cajas" name="numero-cajas">
-        </div>
-      </div>
-      
-      <div class="section">
-        <div class="input-container">
-          <label for="critico">Crítico:</label>
-          <input type="text" id="critico" name="critico">
-        </div>
-        <div class="input-container">
-          <label for="mayor">Mayor:</label>
-          <input type="text" id="mayor" name="mayor">
-        </div>
-        <div class="input-container">
-          <label for="aceptado">Aceptado:</label>
-          <input type="text" id="aceptado" name="aceptado">
-        </div>
-        <div class="input-container">
-          <label for="rechazo">Rechazo:</label>
-          <input type="text" id="rechazo" name="rechazo">
-        </div>
-      </div>
-
-      <h2 id="seleccion-empaque">ESTATUS FINAL</h2>
-      <div class="section">
-        <div class="input-container">
-          <label for="aceptado">Aceptado:</label>
-          <input type="text" id="aceptado" name="aceptado">
-        </div>
-        <div class="input-container">
-          <label for="rechazado">Rechazado:</label>
-          <input type="text" id="rechazado" name="rechazado">
-        </div>
-      </div>
-      <div class="button-container">
-        <a href="inicio_index.html"><button class="button">Volver a la página principal</button></a>
-        <button class="button" onclick="window.print()">Imprimir Documento</button>
       </div>
     </div>
   </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
