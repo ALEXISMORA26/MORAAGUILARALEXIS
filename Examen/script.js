@@ -6,9 +6,10 @@
       var tallasSeleccionadas = document.getElementById('tallas').value.split(',');
       // Tabla de inspección de empaque
       var colorseleccionado = document.getElementById('colores').value.split(',');
-      var numeroreporte = document.getElementById('numero_reporte').value.split('.');
+      var numeroreporte = document.getElementById('numero_reporte').value;
       var tablaEmpaqueBody = document.getElementById('empaque-table').getElementsByTagName('tbody')[0];
       tablaEmpaqueBody.innerHTML = ''; // Limpiar el cuerpo de la tabla
+      var l = 1;
       for (var i = 0; i < totalCajas; i++) {
         for (var j = 0; j < tallasSeleccionadas.length; j++) {
             for (var k = 0; k < colorseleccionado.length; k++) {
@@ -29,7 +30,7 @@
                     '<option value="Inconsistencia en el empaquetado">Inconsistencia en el empaquetado</option>' +
                     '<option value="Etiqueta de manejo ausente">Etiqueta de manejo ausente</option>' +
                     '</select>';
-                cell1.innerHTML = '<input type="text">';
+                cell1.innerHTML = numeroreporte.trim() + ' - EMP -' + (l++);
                 cell2.innerHTML = select_cajas;
                 cell3.innerHTML = (i + 1) + ' (' + tallasSeleccionadas[j].trim() + ' - ' + colorseleccionado[k].trim() + ')';
                 cell4.innerHTML = '<input type="text">';
@@ -44,9 +45,10 @@
       var tallasSeleccionadas = document.getElementById('tallas').value.split(',');
       // Tabla de inspección de etiquetado
       var colorseleccionado = document.getElementById('colores').value.split(',');
-      var numeroreporte = document.getElementById('numero_reporte').value.split('.');
+      var numeroreporte = document.getElementById('numero_reporte').value;
       var tablaEtiquetadoBody = document.getElementById('etiquetado-table').getElementsByTagName('tbody')[0];
       tablaEtiquetadoBody.innerHTML = ''; // Limpiar el cuerpo de la tabla
+      var l = 1;
       for (var i = 0; i < totalPrendas; i++) {
         for (var j = 0; j < tallasSeleccionadas.length; j++) {
             for (var k = 0; k < colorseleccionado.length; k++) {
@@ -67,7 +69,7 @@
                     '<option value="Etiqueta_no_cumple_normativas">Etiqueta que no cumple con las normativas de etiquetado</option>' +
                     '<option value="Error_en_la_composición_del_texto">Error en la composición del texto en la etiqueta</option>' +
                     '</select>';
-                cell1.innerHTML = '<input type="text">';
+                cell1.innerHTML = numeroreporte.trim() + ' - PRE -' + (l++);
                 cell2.innerHTML = select_etiqueta;
                 cell3.innerHTML = (i + 1) + ' (' + tallasSeleccionadas[j].trim() + ' - ' + colorseleccionado[k].trim() + ')';
                 cell4.innerHTML = '<input type="text">';
