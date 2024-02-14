@@ -175,17 +175,14 @@
             </select>
           </div>
         </div>
-        <div class="section">
-          <div class="input-container">
-            <label for="aceptado">*Aceptado:</label>
-            <input type="text" id="aceptado" name="aceptado">
-          </div>
-          <div class="input-container">
-            <label for="rechazo">*Rechazo:</label>
-            <input type="text" id="rechazo" name="rechazo">
-          </div>
+        <div class="input-container">
+          <p for="aceptado-etiquetado">*Aceptado:
+          <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
+          <p for="rechazo-etiquetado">*Rechazo:
+          <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
         </div>
       </div>
+      <hr>
       <div id="etiquetado-d">
 
         <h2 id="seleccion-etiquetado">INSPECCIÓN DE ETIQUETADO</h2>
@@ -232,27 +229,13 @@
             </select>
           </div>
         </div>
-        <div class="section">
-          <div class="input-container">
-            <label for="aceptado-etiquetado">*Aceptado:</label>
-            <input type="text" id="aceptado-etiquetado" name="aceptado-etiquetado">
-          </div>
-          <div class="input-container">
-            <label for="rechazo-etiquetado">*Rechazo:</label>
-            <input type="text" id="rechazo-etiquetado" name="rechazo-etiquetado">
-          </div>
+        <div class="input-container">
+          <p for="aceptado-etiquetado">*Aceptado:
+          <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
+          <p for="rechazo-etiquetado">*Rechazo:
+          <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
         </div>
-        <h2 id="seleccion-empaque">ESTATUS FINAL</h2>
-        <div class="section">
-          <div class="input-container">
-            <label for="aceptado-etiquetado">Aceptado:</label>
-            <input type="text" id="aceptado-etiquetado" name="aceptado-etiquetado">
-          </div>
-          <div class="input-container">
-            <label for="rechazo-etiquetado">Rechazo:</label>
-            <input type="text" id="rechazo-etiquetado" name="rechazo-etiquetado">
-          </div>
-        </div>
+        
 
       </div>
       <hr>
@@ -273,23 +256,26 @@
         <h2>INSPECCIÓN DE MEDIDAS</h2>
         <div class="section">
           <div class="input-container">
-            <label for="modelo">Modelo:</label>
-            <input type="text" id="modelo" name="modelo">
+            <label for="modeloM">Modelo:</label>
+            <input type="text" id="modeloM" name="modeloM" disabled>
           </div>
           <div class="input-container">
-            <label for="numero_reporte">Número de reporte:</label>
-            <input type="text" id="numero_reporte" name="numero_reporte">
+            <label for="numero_reporteM">Número de reporte:</label>
+            <input type="text" id="numero_reporteM" name="numero_reporteM" disabled>
           </div>
           <div class="input-container">
             <label for="fecha_inspeccion">Fecha de inspección:</label>
             <input type="date" id="fecha_inspeccion" name="fecha_inspeccion">
           </div>
           <div class="input-container">
-            <label for="muestreo_prendas">Muestreo de prendas:</label>
-            <input type="date" id="muestreo_prendas" name="muestreo_prendas">
+            <label for="muestreo_prendasM">Muestreo de prendas:</label>
+            <input type="number" id="muestreo_prendasM" name="muestreo_prendasM">
           </div>
-
-          <table>
+          <div class="button-container">
+            <button class="button" onclick="generarTabla3()">Generar tabla</button>
+          </div>
+        </div>
+          <table id="etiquetado-tableM">
             <thead>
               <tr>
                 <th colspan="1">Puntos a Medir</th>
@@ -317,463 +303,6 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                </td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table>
-            <thead>
-              <tr>
-                <th colspan="1">Puntos a Medir</th>
-                <th colspan="2">Ficha Técnica</th>
-                <th colspan="10">No. Prenda / Colores</th>
-                <th rowspan="1">Total de Prendas</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr>
-                <th colspan="1"></th>
-                <th colpan="1">STD</th>
-                <th colpan="1">TOL</th>
-                <th colpan="1">Negro</th>
-                <th colpan="1">Blanco</th>
-                <th colpan="1">Azul</th>
-                <th colpan="1">Rojo</th>
-                <th colpan="1">Verde</th>
-                <th colpan="1">Gris</th>
-                <th colpan="1">Marrón</th>
-                <th colpan="1">Amarillo</th>
-                <th colpan="1">Naranja</th>
-                <th colpan="1">Rosa</th>
-                <th rowspan="1"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                </td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table>
-            <thead>
-              <tr>
-                <th colspan="1">Puntos a Medir</th>
-                <th colspan="2">Ficha Técnica</th>
-                <th colspan="10">No. Prenda / Colores</th>
-                <th rowspan="1">Total de Prendas</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr>
-                <th colspan="1"></th>
-                <th colpan="1">STD</th>
-                <th colpan="1">TOL</th>
-                <th colpan="1">Negro</th>
-                <th colpan="1">Blanco</th>
-                <th colpan="1">Azul</th>
-                <th colpan="1">Rojo</th>
-                <th colpan="1">Verde</th>
-                <th colpan="1">Gris</th>
-                <th colpan="1">Marrón</th>
-                <th colpan="1">Amarillo</th>
-                <th colpan="1">Naranja</th>
-                <th colpan="1">Rosa</th>
-                <th rowspan="1"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                </td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table>
-            <thead>
-              <tr>
-                <th colspan="1">Puntos a Medir</th>
-                <th colspan="2">Ficha Técnica</th>
-                <th colspan="10">No. Prenda / Colores</th>
-                <th rowspan="1">Total de Prendas</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr>
-                <th colspan="1"></th>
-                <th colpan="1">STD</th>
-                <th colpan="1">TOL</th>
-                <th colpan="1">Negro</th>
-                <th colpan="1">Blanco</th>
-                <th colpan="1">Azul</th>
-                <th colpan="1">Rojo</th>
-                <th colpan="1">Verde</th>
-                <th colpan="1">Gris</th>
-                <th colpan="1">Marrón</th>
-                <th colpan="1">Amarillo</th>
-                <th colpan="1">Naranja</th>
-                <th colpan="1">Rosa</th>
-                <th rowspan="1"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                </td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
-
-              <tr>
-                <td><input type="text" name="punto1"></td>
-                <td><input type="text" name="std1"></td>
-                <td><input type="text" name="tol1"></td>
-
-                <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-              </tr>
             </tbody>
           </table>
 
@@ -782,19 +311,18 @@
             <input type="text" id="mayor" name="mayor">
           </div>
           <div class="input-container">
-            <label for="aceptado">Aceptado:</label>
-            <input type="text" id="aceptado" name="aceptado">
+            <p for="aceptado-etiquetado">*Aceptado:
+            <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
+            <p for="rechazo-etiquetado">*Rechazo:
+            <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
           </div>
-          <div class="input-container">
-            <label for="rechazo">Rechazo:</label>
-            <input type="text" id="rechazo" name="rechazo">
-          </div>
-        </div>
+        
 
 
-        <hr>
+        
 
       </div>
+      <hr>
       <div id="visual-d">
         <!-- <div class="left-panel">
             <div class="checkbox-container">
@@ -813,34 +341,38 @@
           <div class="section">
             <div class="input-container">
               <label for="modelo">Modelo:</label>
-              <input type="text" id="modelo" name="modelo">
+              <input type="text" id="modeloV" name="modeloV" disabled>
             </div>
             <div class="input-container">
-              <label for="numero_reporte">Número de reporte:</label>
-              <input type="text" id="numero_reporte" name="numero_reporte">
+              <label for="numero_reporteV">Número de reporte:</label>
+              <input type="text" id="numero_reporteV" name="numero_reporteV" disabled>
             </div>
             <div class="input-container">
               <label for="fecha_inspeccion">Fecha de inspección:</label>
               <input type="date" id="fecha_inspeccion" name="fecha_inspeccion">
             </div>
             <div class="input-container">
-              <label for="muestreo_prendas">Muestreo de prendas:</label>
-              <input type="date" id="muestreo_prendas" name="muestreo_prendas">
+              <label for="muestreo_prendasV">Muestreo de prendas:</label>
+              <input type="number" id="muestreo_prendasV" name="muestreo_prendasV">
             </div>
-
-            <table>
+            <div class="button-container">
+              <button class="button" onclick="generarTabla4()">Generar tabla</button>
+            </div>
+          </div>
+            <table id="etiquetado-tableV">
               <thead>
                 <tr>
-                  <th rowspan="2">Código</th>
-                  <th colspan="1">Descripción de defectivo</th>
+                  <th colspan="1">Puntos a Medir</th>
+                  <th colspan="2">Ficha Técnica</th>
                   <th colspan="10">No. Prenda / Colores</th>
                   <th rowspan="1">Total de Prendas</th>
                 </tr>
               </thead>
               <thead>
                 <tr>
-                  <th rowspan="1"></th>
                   <th colspan="1"></th>
+                  <th colpan="1">STD</th>
+                  <th colpan="1">TOL</th>
                   <th colpan="1">Negro</th>
                   <th colpan="1">Blanco</th>
                   <th colpan="1">Azul</th>
@@ -855,178 +387,6 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
-                <tr>
-                  <td>2</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
-                <tr>
-                  <td>3</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
-                <tr>
-                  <td>4</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  </td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
-                <tr>
-                  <td>5</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
-                <tr>
-                  <td>6</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
-                <tr>
-                  <td>7</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
-                <tr>
-                  <td>8</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
-                <tr>
-                  <td>9</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
-                <tr>
-                  <td>10</td>
-                  <td><input type="text" name="descripcio1"></td>
-
-                  <td><input type="number" id="numero" name="prenda1" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda2" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda3" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda4" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda5" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda6" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda7" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda8" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda9" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="prenda10" min="0" max="1000"></td>
-                  <td><input type="number" id="numero" name="total1" min="0" max="1000"></td>
-                </tr>
-
                 <tr>
                   <td></td>
                   <td>Total de Defectivos</td>
@@ -1072,18 +432,27 @@
                 <label for="mayor">Mayor:</label>
                 <input type="text" id="mayor" name="mayor">
               </div>
-              <div class="input-container">
-                <label for="aceptado">Aceptado:</label>
-                <input type="text" id="aceptado" name="aceptado">
-              </div>
-              <div class="input-container">
-                <label for="rechazo">Rechazo:</label>
-                <input type="text" id="rechazo" name="rechazo">
-              </div>
             </div>
-          </div>
+            <div class="input-container">
+              <p for="aceptado-etiquetado">*Aceptado:
+              <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
+              <p for="rechazo-etiquetado">*Rechazo:
+              <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
+            </div>
+          
         </div>
       </div>
+      <hr>
+      <h2 id="seleccion-empaque">ESTATUS FINAL</h2>
+        <div class="section">
+          <div class="input-container">
+            <p for="aceptado-etiquetado">*Aceptado:
+            <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
+            <p for="rechazo-etiquetado">*Rechazo:
+            <input type="radio" id="aceptado-etiquetado" name="aceptado-etiquetado">
+          </div>
+          
+        </div>
       <!-- <div class="section"> -->
         <div class="input-container">
           <label for="firma_proveedor">FIRMA DEL PROVEEDOR____________________________________:</label>

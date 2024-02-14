@@ -50,6 +50,7 @@ function generarTabla() {
     }
   }
 }
+
 function generarTabla2() {
   // Obtener el número total de prendas
   var totalPrendas = parseInt(
@@ -103,6 +104,122 @@ function generarTabla2() {
   }
 }
 
+function generarTabla3() {
+  // Obtener el número total de prendas
+  var totalPrendas = parseInt(
+    document.getElementById("muestreo_prendasM").value
+  );
+
+  document.getElementById("modeloM").value = document.getElementById("modelo").value;
+  document.getElementById("numero_reporteM").value = document.getElementById("numero_reporte").value;
+  // Obtener las tallas seleccionadas
+  //var tallasSeleccionadas = document.getElementById("tallas").value.split(",");
+  // Tabla de inspección de etiquetado
+  var colorseleccionado = document.getElementById("colores").value.split(",");
+  var numeroreporte = document.getElementById("numero_reporteM").value;
+  console.log(numeroreporte)
+  var tablaEtiquetadoBody = document
+    .getElementById("etiquetado-tableM")
+    .getElementsByTagName("tbody")[0];
+  tablaEtiquetadoBody.innerHTML = ""; // Limpiar el cuerpo de la tabla
+  var l = 1;
+  for (var i = 0; i < totalPrendas; i++) {
+    // for (var j = 0; j < tallasSeleccionadas.length; j++) {
+      for (var k = 0; k < colorseleccionado.length; k++) {
+        var row = tablaEtiquetadoBody.insertRow();
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+        var cell8 = row.insertCell(7);
+        var cell9 = row.insertCell(8);
+        var cell10 = row.insertCell(9);
+        var cell11 = row.insertCell(10);
+        var cell12 = row.insertCell(11);
+        var cell13 = row.insertCell(12);
+        var cell14 = row.insertCell(13);
+        
+        cell1.innerHTML = '<input type="text">';
+        cell2.innerHTML = '<input type="text">';
+        cell3.innerHTML = '<input type="text">';
+        cell4.innerHTML = '<input type="number">';
+        cell5.innerHTML = '<input type="number">';
+        cell6.innerHTML = '<input type="number">';
+        cell7.innerHTML = '<input type="number">';
+        cell8.innerHTML = '<input type="number">';
+        cell9.innerHTML = '<input type="number">';
+        cell10.innerHTML = '<input type="number">';
+        cell11.innerHTML = '<input type="number">';
+        cell12.innerHTML = '<input type="number">';
+        cell13.innerHTML = '<input type="number">';
+        cell14.innerHTML = '<input type="number">';
+      }
+    //}
+  }
+}
+
+function generarTabla4() {
+  // Obtener el número total de prendas
+  var totalPrendas = parseInt(
+    document.getElementById("muestreo_prendasV").value
+  );
+
+  document.getElementById("modeloV").value = document.getElementById("modelo").value;
+  document.getElementById("numero_reporteV").value = document.getElementById("numero_reporte").value;
+  // Obtener las tallas seleccionadas
+  //var tallasSeleccionadas = document.getElementById("tallas").value.split(",");
+  // Tabla de inspección de etiquetado
+  var colorseleccionado = document.getElementById("colores").value.split(",");
+  var numeroreporte = document.getElementById("numero_reporteV").value;
+  console.log(numeroreporte)
+  var tablaEtiquetadoBody = document
+    .getElementById("etiquetado-tableV")
+    .getElementsByTagName("tbody")[0];
+  tablaEtiquetadoBody.innerHTML = ""; // Limpiar el cuerpo de la tabla
+  var l = 1;
+  for (var i = 0; i < totalPrendas; i++) {
+    // for (var j = 0; j < tallasSeleccionadas.length; j++) {
+      for (var k = 0; k < colorseleccionado.length; k++) {
+        var row = tablaEtiquetadoBody.insertRow();
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+        var cell8 = row.insertCell(7);
+        var cell9 = row.insertCell(8);
+        var cell10 = row.insertCell(9);
+        var cell11 = row.insertCell(10);
+        var cell12 = row.insertCell(11);
+        var cell13 = row.insertCell(12);
+        var cell14 = row.insertCell(13);
+        
+        cell1.innerHTML = '<input type="text">';
+        cell2.innerHTML = '<input type="text">';
+        cell3.innerHTML = '<input type="text">';
+        cell4.innerHTML = '<input type="number">';
+        cell5.innerHTML = '<input type="number">';
+        cell6.innerHTML = '<input type="number">';
+        cell7.innerHTML = '<input type="number">';
+        cell8.innerHTML = '<input type="number">';
+        cell9.innerHTML = '<input type="number">';
+        cell10.innerHTML = '<input type="number">';
+        cell11.innerHTML = '<input type="number">';
+        cell12.innerHTML = '<input type="number">';
+        cell13.innerHTML = '<input type="number">';
+        cell14.innerHTML = '<input type="number">';
+      }
+    //}
+  }
+}
+
+
+// funciones para habilitar/deshabilitar divs con un checkbox
 document.addEventListener("DOMContentLoaded", function() {
   var checkboxempaque = document.getElementById('empaque');
   var checkboxmedidas = document.getElementById('medidas');
