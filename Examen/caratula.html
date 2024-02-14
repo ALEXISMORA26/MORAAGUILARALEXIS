@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="right-panel" >
+    <div class="right-panel">
       <h2>INFORME DE INSPECCIÓN</h2>
       <div class="section">
         <div class="input-container">
@@ -129,143 +129,132 @@
       </div>
       <div id="empaque-d">
 
-      
-      <h2 id="seleccion-empaque">INSPECCIÓN DE EMPAQUE</h2>
-      <div class="section">
-        <div class="input-container">
-          <label for="total-cajas">*Total de cajas:</label>
-          <input type="number" id="total-cajas-empaque" name="total-cajas" value="1">
+
+        <h2 id="seleccion-empaque">INSPECCIÓN DE EMPAQUE</h2>
+        <div class="section">
+          <div class="input-container">
+            <label for="total-cajas">*Total de cajas:</label>
+            <input type="number" id="total-cajas-empaque" name="total-cajas" value="1">
+          </div>
+          <div class="input-container">
+            <label for="muestreo-cajas">*Muestreo de Cajas:</label>
+            <input type="number" id="muestreo-cajas-empaque" name="muestreo-cajas" value="1">
+          </div>
+          <div class="button-container">
+            <button class="button" onclick="generarTabla()">Generar tabla</button>
+          </div>
         </div>
-        <div class="input-container">
-          <label for="muestreo-cajas">*Muestreo de Cajas:</label>
-          <input type="number" id="muestreo-cajas-empaque" name="muestreo-cajas" value="1">
+
+        <table id="empaque-table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Defecto</th>
+              <th>Número de caja</th>
+              <th>Total de Defecticvos</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <div class="section">
+          <div class="input-container">
+            <label for="critico">Crítico:</label>
+            <select id="critico" name="critico">
+              <option value="Sin"></option>
+              <option value="AQL/AC">AQL/AC</option>
+              <option value="AQL/RE">AQL/RE</option>
+            </select>
+          </div>
+          <div class="input-container">
+            <label for="mayor">Mayor:</label>
+            <select id="mayor" name="mayor">
+              <option value="Sin"></option>
+              <option value="AQL/AC">AQL/AC</option>
+              <option value="AQL/RE">AQL/RE</option>
+            </select>
+          </div>
         </div>
-        <div class="button-container">
-          <button class="button" onclick="generarTabla()">Generar tabla</button>
+        <div class="section">
+          <div class="input-container">
+            <label for="aceptado">*Aceptado:</label>
+            <input type="text" id="aceptado" name="aceptado">
+          </div>
+          <div class="input-container">
+            <label for="rechazo">*Rechazo:</label>
+            <input type="text" id="rechazo" name="rechazo">
+          </div>
         </div>
       </div>
-      
-      <table id="empaque-table">
-        <thead>
-          <tr>
-            <th>Código</th>
-            <th>Defecto</th>
-            <th>Número de caja</th>
-            <th>Total de Defecticvos</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-      <div class="section">
-        <div class="input-container">
-          <label for="critico">Crítico:</label>
-          <select id="critico" name="critico">
-            <option value="Sin"></option>
-            <option value="AQL/AC">AQL/AC</option>
-            <option value="AQL/RE">AQL/RE</option>
-          </select>
-        </div>
-        <div class="input-container">
-          <label for="mayor">Mayor:</label>
-          <select id="mayor" name="mayor">
-            <option value="Sin"></option>
-            <option value="AQL/AC">AQL/AC</option>
-            <option value="AQL/RE">AQL/RE</option>
-          </select>
-        </div>
-      </div>
-      <div class="section">
-        <div class="input-container">
-          <label for="aceptado">*Aceptado:</label>
-          <input type="text" id="aceptado" name="aceptado">
-        </div>
-        <div class="input-container">
-          <label for="rechazo">*Rechazo:</label>
-          <input type="text" id="rechazo" name="rechazo">
-        </div>
-      </div>
-    </div>
       <div id="etiquetado-d">
-      
-      <h2 id="seleccion-etiquetado">INSPECCIÓN DE ETIQUETADO</h2>
-      <div class="section">
-        <div class="input-container">
-          <label for="total-prendas">Total de prendas:</label>
-          <input type="number" id="total-prendas-etiquetado" name="total-prendas" value="1">
+
+        <h2 id="seleccion-etiquetado">INSPECCIÓN DE ETIQUETADO</h2>
+        <div class="section">
+          <div class="input-container">
+            <label for="total-prendas">Total de prendas:</label>
+            <input type="number" id="total-prendas-etiquetado" name="total-prendas" value="1">
+          </div>
+          <div class="input-container">
+            <label for="muestreo-prendas">Muestreo de prendas:</label>
+            <input type="number" id="muestreo-prendas-etiquetado" name="muestreo-prendas" value="1">
+          </div>
+          <div class="button-container">
+            <button class="button" onclick="generarTabla2()">Generar tabla</button>
+          </div>
         </div>
-        <div class="input-container">
-          <label for="muestreo-prendas">Muestreo de prendas:</label>
-          <input type="number" id="muestreo-prendas-etiquetado" name="muestreo-prendas" value="1">
+        <table id="etiquetado-table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Defecto</th>
+              <th>Número de prenda</th>
+              <th>Total de Defectivos</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <div class="section">
+          <div class="input-container">
+            <label for="critico-etiquetado">Crítico:</label>
+            <select id="critico-etiquetado" name="critico-etiquetado">
+              <option value="Sin"></option>
+              <option value="AQL/AC">AQL/AC</option>
+              <option value="AQL/RE">AQL/RE</option>
+            </select>
+          </div>
+          <div class="input-container">
+            <label for="mayor-etiquetado">Mayor:</label>
+            <select id="mayor-etiquetado" name="mayor-etiquetado">
+              <option value="Sin"></option>
+              <option value="AQL/AC">AQL/AC</option>
+              <option value="AQL/RE">AQL/RE</option>
+            </select>
+          </div>
         </div>
-        <div class="button-container">
-          <button class="button" onclick="generarTabla2()">Generar tabla</button>
+        <div class="section">
+          <div class="input-container">
+            <label for="aceptado-etiquetado">*Aceptado:</label>
+            <input type="text" id="aceptado-etiquetado" name="aceptado-etiquetado">
+          </div>
+          <div class="input-container">
+            <label for="rechazo-etiquetado">*Rechazo:</label>
+            <input type="text" id="rechazo-etiquetado" name="rechazo-etiquetado">
+          </div>
         </div>
+        <h2 id="seleccion-empaque">ESTATUS FINAL</h2>
+        <div class="section">
+          <div class="input-container">
+            <label for="aceptado-etiquetado">Aceptado:</label>
+            <input type="text" id="aceptado-etiquetado" name="aceptado-etiquetado">
+          </div>
+          <div class="input-container">
+            <label for="rechazo-etiquetado">Rechazo:</label>
+            <input type="text" id="rechazo-etiquetado" name="rechazo-etiquetado">
+          </div>
+        </div>
+
       </div>
-      <table id="etiquetado-table">
-        <thead>
-          <tr>
-            <th>Código</th>
-            <th>Defecto</th>
-            <th>Número de prenda</th>
-            <th>Total de Defectivos</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-      <div class="section">
-        <div class="input-container">
-          <label for="critico-etiquetado">Crítico:</label>
-          <select id="critico-etiquetado" name="critico-etiquetado">
-            <option value="Sin"></option>
-            <option value="AQL/AC">AQL/AC</option>
-            <option value="AQL/RE">AQL/RE</option>
-          </select>
-        </div>
-        <div class="input-container">
-          <label for="mayor-etiquetado">Mayor:</label>
-          <select id="mayor-etiquetado" name="mayor-etiquetado">
-            <option value="Sin"></option>
-            <option value="AQL/AC">AQL/AC</option>
-            <option value="AQL/RE">AQL/RE</option>
-          </select>
-        </div>
-      </div>
-      <div class="section">
-        <div class="input-container">
-          <label for="aceptado-etiquetado">*Aceptado:</label>
-          <input type="text" id="aceptado-etiquetado" name="aceptado-etiquetado">
-        </div>
-        <div class="input-container">
-          <label for="rechazo-etiquetado">*Rechazo:</label>
-          <input type="text" id="rechazo-etiquetado" name="rechazo-etiquetado">
-        </div>
-      </div>
-      <h2 id="seleccion-empaque">ESTATUS FINAL</h2>
-      <div class="section">
-        <div class="input-container">
-          <label for="aceptado-etiquetado">Aceptado:</label>
-          <input type="text" id="aceptado-etiquetado" name="aceptado-etiquetado">
-        </div>
-        <div class="input-container">
-          <label for="rechazo-etiquetado">Rechazo:</label>
-          <input type="text" id="rechazo-etiquetado" name="rechazo-etiquetado">
-        </div>
-      </div>
-      <div class="section">
-        <div class="input-container">
-          <label for="firma_proveedor">fIRMA DEL PROVEEDOR____________________________________:</label>
-        </div>
-        <div class="input-container">
-          <label for="firma_inspector">FIRMA DEL INSPECTOR_________________________________:</label>
-        </div>
-      </div>
-      <div class="button-container">
-        <a href="inicio.html"><button class="button">Volver a la página principal</button></a>
-        <button class="button" onclick="window.print()">Imprimir Documento</button>
-      </div>
-    </div>
       <hr>
       <!-- <div class="container"> -->
       <!-- <div class="left-panel">
@@ -801,25 +790,12 @@
             <input type="text" id="rechazo" name="rechazo">
           </div>
         </div>
-        <div class="input-container">
-          <label for="firmaI"></label>
-          <div class="input-container">
-            <label for="firmaP">Firma del Proveedor:______________</label>
-          </div>
-          <div class="input-container">
-            <label for="firmaI">Firma del Inspector:________________</label>
-          </div>
 
-        </div>
-        <div class="button-container">
-          <a href="inicio.html"><button class="button">Volver a la página principal</button></a>
-          <button class="button" onclick="window.print()">Imprimir Documento</button>
-        </div>
 
         <hr>
 
       </div>
-      <div class="container" id="visual-d">
+      <div id="visual-d">
         <!-- <div class="left-panel">
             <div class="checkbox-container">
               <div class="checkbox-container">
@@ -1105,25 +1081,20 @@
                 <input type="text" id="rechazo" name="rechazo">
               </div>
             </div>
-            <div class="input-container">
-              <label for="firmaI"></label>
-              <div class="input-container">
-                <label for="firmaP">Firma del Proveedor:______________</label>
-              </div>
-              <div class="input-container">
-                <label for="firmaI">Firma del Inspector:________________</label>
-              </div>
-
-            </div>
-            <div class="button-container">
-              <a href="inicio.html"><button class="button">Volver a la página principal</button></a>
-              <button class="button" onclick="window.print()">Imprimir Documento</button>
-            </div>
-
-
           </div>
         </div>
-
+      </div>
+      <!-- <div class="section"> -->
+        <div class="input-container">
+          <label for="firma_proveedor">FIRMA DEL PROVEEDOR____________________________________:</label>
+        </div>
+        <div class="input-container">
+          <label for="firma_inspector">FIRMA DEL INSPECTOR_________________________________:</label>
+        </div>
+      <!-- </div> -->
+      <div class="button-container">
+        <a href="inicio.html"><button class="button">Volver a la página principal</button></a>
+        <button class="button" onclick="window.print()">Imprimir Documento</button>
       </div>
     </div>
   </div>
