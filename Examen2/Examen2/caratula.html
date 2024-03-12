@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API FETCH</title>
+  <link rel="stylesheet" href="./styles.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./clima.css">
+    <!-- <link rel="shortcut icon" href="icons/thunder.png"> -->
+    
+</head>
+
+<body>
+  <header style="text-align: center">
+    <div class="button" style=" background-image: url('hacker.jpg ')">
+      <h1>Bienvenido a API FETCH</h1>
+      <h4>!Tú API en cada click¡</h4>
+    </div>
+  </header>
+  <div class="containerS">
+    <div class="left-panel">
+      <div class="checkbox-containerv">
+        <h3>Tipo de API:</h3>
+        <div class="checkbox-containerv">
+          <input onclick="init()" type="checkbox" id="divisas" name="divisas" value="divisas">
+          <label for="divisas">Conversión de Div.</label>
+        </div>
+        <div class="checkbox-containerv">
+          <input checked type="checkbox" id="clima" name="clima" value="clima">
+          <label for="clima">Clima</label>
+        </div>
+      </div>
+    </div>
+    <div class="right-panel">
+
+      <div id="divisas-d" class="currency-converter">
+        <div class="title">
+          <img src="exchange.png" />
+          <h1 style="color: black;">Conversión de Divisas</h1>
+        </div>
+        <div class="exchange-rate">
+          <p>--- Equivale</p>
+          <h1>---</h1>
+        </div>
+        <div class="from-currency">
+          <input  class="pepe" type="number" id="from-currency-amount" value="1" />
+          <select  class="pepe">
+            <option>USD - United States Dollar</option>
+          </select>
+        </div>
+        <div class="to-currency">
+          <input class="pepe" type="number" id="to-currency-amount" />
+          <select class="pepe">
+            <option>USD - United States Dollar American Morocco</option>
+          </select>
+        </div>
+      </div>
+      <hr>
+      <div id="clima-d">
+        <div class="container-flex">
+
+          <div class="weather-card mt-2">
+              <div>
+                  <input type="text" placeholder="Ingresa un Estado" class="m-1 city-input pl-4">
+                  <button type="button" class=" btn-search m-1"> Buscar </button>
+              </div>
+
+              <div class="lg-card m-2" data-aos="fade-up">
+                  <div d-flex flex-column>
+                      <img src="icons/011-cloud.png" class="weather-icon">
+                      <h4 class="weather">Es un Hermoso Día</h4>
+                      <h2 class="temp">--</h2>
+                      <p class="">Celsius</p>
+
+                      <div class="mb-2 m2">
+                          <p class="float-left place">Lugar</p>
+                          <p class="float-right date"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="d-flex flex-column">
+              <div class="weather-data">
+                  <div class="all-cards " data-aos="fade-up">
+
+                      <div class="sm-card">
+                          <img src="icons/sun.png" class="icon">
+                          <p>Max</p>
+                          <h5 class="max-temp value"></h5>
+                      </div>
+
+                      <div class="sm-card ">
+                          <img src="icons/climate.png" class="icon">
+                          <p>Min</p>
+                          <h5 class="min-temp value"></h5></strong>
+                      </div>
+
+                      <div class="sm-card ">
+                          <img src="icons/water.png" class="icon center">
+                          <p>Humedad</p>
+                          <h5 class="humidity value"></h5>
+                      </div>
+
+                      <div class="sm-card">
+                          <img src="icons/017-wind.png" class="icon">
+                          <p>Vel. del viento</p>
+                          <h5 class="wind-speed value"></h5>
+                      </div>
+
+                      <div class="sm-card">
+                          <img src="icons/indicator.png" class="icon">
+                          <p>Preción</p>
+                          <h5 class="pressure value"></h5>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- <div class="tagline">
+                  <h3>Get real time weather of any location with</h3>
+                  <h3 class="date">⚡Dynamic-weather-App</h3>
+              </div> -->
+          </div>
+      </div>
+      </div> 
+      <hr>
+      <div class="button-container">
+        <a href="inicio.html"><button class="button">Volver a la página principal</button></a>
+        <button class="button" onclick="window.print()">Imprimir Documento</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="./prueba.js"></script>
+  <script src="./script.js"></script>
+  <script src="./clima.js"></script>
+</body>
+
+</html>
