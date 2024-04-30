@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -62,11 +64,11 @@ export default function EditarEmpleados() {
                 onChange={(e)=>onInputChange(e)} value={name}/>
                 
             </div>
-            <div className="mb-3">
+            {/* <div className="mb-3">
                 <label htmlFor="email" className="form-label">Email</label>
                 <input type="text" className="form-control" id="email" name='email' 
                 onChange={(e)=>onInputChange(e)} value={email}/>
-            </div>
+            </div> */}
             <div className="mb-3">
                 <label htmlFor="phone" className="form-label">Número</label>
                 <input type="number" step="any" className="form-control" id="phone" name='phone' 
@@ -74,7 +76,7 @@ export default function EditarEmpleados() {
             </div>
             <div className='text-center'>
             <button type="submit" className="btn btn-warning btn-sm me-3">Guardar</button>
-            <a href='/' className='btn btn-danger btn-sm' >Regresar</a>
+            <a href='/admin' className='btn btn-danger btn-sm' >Regresar</a>
             </div>
         </form>
     </div>

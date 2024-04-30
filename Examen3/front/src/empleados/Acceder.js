@@ -43,7 +43,7 @@ export default function Acceder() {
   return (
     <div className="container">
 
-      <h1 className="text-center">Aceder</h1>
+      <h1 className="container text-center" style={{ margin: "30px" }}>Aceder</h1>
      
         <form onSubmit={(e) => onSubmint(e)}>
           <div class="mb-3">

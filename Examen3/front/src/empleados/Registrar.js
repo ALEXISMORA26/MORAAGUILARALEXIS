@@ -47,7 +47,7 @@ export default function Registrar() {
   return (
     <div className="container">
 
-<h1 className="text-center">Registrarse</h1>
+<h1 className="container text-center" style={{ margin: "30px" }}>Registrarse</h1>
      
         <form onSubmit={(e) => onSubmint(e)}>
 

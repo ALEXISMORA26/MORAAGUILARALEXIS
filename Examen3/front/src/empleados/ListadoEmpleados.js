@@ -34,6 +34,7 @@ export default function ListadoEmpleados() {
   const eliminarEmpleado = async  (id) => {
     const urlBase = "http://localhost:3001/api/v1/users";
     await axios.delete(`${urlBase}/${id}`);
+    alert('Usuario eliminado correctamente')
     cargarEmpleados();
   }
 

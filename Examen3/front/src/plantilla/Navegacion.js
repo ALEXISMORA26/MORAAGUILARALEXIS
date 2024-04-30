@@ -1,7 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { NumericFormat } from "react-number-format";
+// import { Link } from "react-router-dom";
 
 export default function Navegacion() {
+
+  const [productos, setProductos] = useState([]);
+
+  // axios.interceptors.request.use(function(config){
+  //   const token = localStorage.getItem("token");
+  //   config.headers.Authorization = `Bearer ${token}`
+  //   return config;
+  // });
+  
+
+  
+
+
+  useEffect(() => {
+    cargarProductos();
+  }, []);
+
+  const cargarProductos = async () => {
+    const urlBase = "http://localhost:3001/api/v1/products";
+    const {data} = await axios.get(urlBase);
+    const {data: resultado} = await axios.get(urlBase);
+    console.log("Resultado de Productos");
+    console.log(data);
+    setProductos(resultado);
+  };
   return (
     // <div classNameName="container">
     //   <nav classNameName="navbar navbar-expand-lg navbar-dark  bg-body-tertiary">
@@ -90,6 +118,10 @@ export default function Navegacion() {
     </div>
   </div>
 </nav>
+
+
 </div>
+
+              
   );
 }
