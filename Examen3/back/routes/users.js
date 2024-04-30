@@ -109,15 +109,15 @@ router.post('/register', async (req,res)=>{
     })
     
     if(!user)
-    return res.status(400).send('no se pudo crear el usuario!')
+    return res.status(200).send('no se pudo crear el usuario!')
 
     const pepe = await User.findOne({email: req.body.email})
 
 if(pepe ){
-    return res.status(400).send('el usuario ya existe!')
+    return res.status(200).send('el email ya esta registrado!')
  }else{
         user = await user.save();
-        res.send(user);
+        res.send('usuario registrado correctamente');
     }
 
 })
