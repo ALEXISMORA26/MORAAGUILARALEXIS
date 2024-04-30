@@ -36,6 +36,11 @@ export default function ListarProductos() {
     alert('Producto eliminado correctamente')
     cargarProductos();
   }
+  const styles = {
+    imagen:{
+      width:"100px"
+    }
+  }
 
 
   return (
@@ -58,7 +63,8 @@ export default function ListarProductos() {
         <tbody>
           {productos.map((Productos, indice) => (
             <tr key={indice}>
-              <td>{Productos.image}</td>
+              
+              <td ><img style={styles.imagen} className="img-thumbnail" src={Productos.image}></img></td>
               <td>{Productos.name}</td>
               <td>{Productos.description}</td>
               <td>

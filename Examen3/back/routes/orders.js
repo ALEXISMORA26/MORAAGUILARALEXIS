@@ -5,10 +5,11 @@ const router = express.Router();
 
 router.get(`/`, async (req, res) =>{
     const orderList = await Order.find().populate('user', 'name').sort({'dateOrdered': -1});
-
+    // const orderList = await Order.findById('user','id')
     if(!orderList) {
         res.status(500).json({success: false})
     } 
+    // Order.findById
     res.send(orderList);
 })
 

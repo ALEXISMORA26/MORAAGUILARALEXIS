@@ -41,7 +41,7 @@ export default function ListadoEmpleados() {
   return (
     <div className="container">
       <div className="container text-center" style={{ margin: "30px" }}>
-        <h3>Sistema Recursos Humanos</h3>
+        <h3>Empleados</h3>
       </div>
       <table className="table table-striped table-hover align-middle">
         <thead className="table-dark">

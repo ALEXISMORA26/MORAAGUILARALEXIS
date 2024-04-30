@@ -56,7 +56,7 @@ export default function EditarProductos() {
   return (
     <div className='container'>
         <div className='container text-center' style={{margin: "30px"}}>
-            <h3>Editar Empleado</h3>
+            <h3>Editar Producto</h3>
         </div>
         <form  onSubmit={(e) => onSubmint(e)} >
             <div className="mb-3">

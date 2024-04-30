@@ -24,7 +24,7 @@ export default function EditarEmpleados() {
         phone:""
     })
 
-    const {name, email, phone} = empleado
+    const {name, phone} = empleado
 
     //se utiliza para procesar alg cuando mse carga ese componente
     useEffect(() =>{

@@ -24,9 +24,50 @@ export default function Listar() {
     const {data} = await axios.get(urlBase);
     const {data: resultado} = await axios.get(urlBase);
     console.log("Resultado de Productos");
-    console.log(data);
+    // console.log(data);
     setProductos(resultado);
   };
+
+  const agregarCarrito = async  (id) => {
+    // const urlBase = "http://localhost:3001/api/v1/products";
+    // await axios.delete(`${urlBase}/${id}`);
+    let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if (productosEnCarritoLS) {
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    // actualizarNumerito();
+} else {
+    productosEnCarrito = [];
+}
+    const productoAgregado = ({
+      id,
+      quantity: "1"
+
+    })
+  //   if(productosEnCarrito.some(producto => producto.id === idBoton)) {
+  //     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+  //     productosEnCarrito[index].cantidad++;
+  // } else {
+      // productoAgregado.cantidad = 1;
+      // productosEnCarrito.push(productosEnCarrito);
+  // }
+  productosEnCarrito.push(productoAgregado);
+    //  id = productosEnCarrito
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+
+    // localStorage.setItem()
+    alert('Producto agreago al correctamente')
+    cargarProductos();
+  }
+
+  const styles = {
+    imagen:{
+      width:"100px"
+    }
+  }
+
   return (
     <div className="container">
     <div className="container text-center" style={{ margin: "30px" }}>
@@ -47,7 +88,8 @@ export default function Listar() {
       <tbody>
         {productos.map((Productos, indice) => (
           <tr key={indice}>
-            <td>{Productos.image}</td>
+            {/* <td>{Productos.image}</td> */}
+            <td ><img className="img-thumbnail" style={styles.imagen}  src={Productos.image}></img></td>
             <td>{Productos.name}</td>
             <td>{Productos.description}</td>
             <td>
@@ -67,13 +109,13 @@ export default function Listar() {
                 fixedDecimalScale
                 />
             </td>
-            {/* <td className="text-center">
+            <td className="text-center">
                 <div>
-                  <Link to={`/Productos/editar/${Productos.id}`} className="btn btn-warning btn-sm me-3" >Editar</Link>
-                  <button onClick={() => eliminarProductos(Productos.id)} className="btn btn-danger btn-sm">Eliminar</button>
+                  {/* <Link to={`/Productos/editar/${Productos.id}`} className="btn btn-warning btn-sm me-3" >Editar</Link> */}
+                  <button onClick={() => agregarCarrito(Productos.id)} className="btn btn-primary btn-sm">Agregar</button>
 
                 </div>
-            </td> */}
+            </td>
           </tr>
         ))}
         <tr></tr>

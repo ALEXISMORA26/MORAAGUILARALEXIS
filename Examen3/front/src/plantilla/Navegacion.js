@@ -6,30 +6,30 @@ import { NumericFormat } from "react-number-format";
 
 export default function Navegacion() {
 
-  const [productos, setProductos] = useState([]);
+  // const [productos, setProductos] = useState([]);
 
-  // axios.interceptors.request.use(function(config){
-  //   const token = localStorage.getItem("token");
-  //   config.headers.Authorization = `Bearer ${token}`
-  //   return config;
-  // });
+  // // axios.interceptors.request.use(function(config){
+  // //   const token = localStorage.getItem("token");
+  // //   config.headers.Authorization = `Bearer ${token}`
+  // //   return config;
+  // // });
   
 
   
 
 
-  useEffect(() => {
-    cargarProductos();
-  }, []);
+  // useEffect(() => {
+  //   cargarProductos();
+  // }, []);
 
-  const cargarProductos = async () => {
-    const urlBase = "http://localhost:3001/api/v1/products";
-    const {data} = await axios.get(urlBase);
-    const {data: resultado} = await axios.get(urlBase);
-    console.log("Resultado de Productos");
-    console.log(data);
-    setProductos(resultado);
-  };
+  // const cargarProductos = async () => {
+  //   const urlBase = "http://localhost:3001/api/v1/products";
+  //   const {data} = await axios.get(urlBase);
+  //   const {data: resultado} = await axios.get(urlBase);
+  //   console.log("Resultado de Productos");
+  //   console.log(data);
+  //   setProductos(resultado);
+  // };
   return (
     // <div classNameName="container">
     //   <nav classNameName="navbar navbar-expand-lg navbar-dark  bg-body-tertiary">
@@ -69,6 +69,11 @@ export default function Navegacion() {
     <nav className="navbar navbar-dark bg-dark ">
   <div className="container-fluid">
     <a className="navbar-brand" href="/">Tiendita</a>
+    <li>
+                        <a class="boton-menu boton-carrito" href="./carrito.html">
+                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
+                        </a>
+                    </li>
     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
