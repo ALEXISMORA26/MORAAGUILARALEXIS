@@ -10,6 +10,8 @@ import ListarProductos from "./productos/ListarProductos";
 import ListarOrdenes from "./ordenes/ListarOrdenes";
 import EditarProductos from "./productos/EditarProductos";
 import Listar from "./productos/Listar";
+import Carrito from "./ordenes/Carrito";
+import HacerOrden from "./ordenes/HacerOrden";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route exact path="/Productos" element={<ListarProductos/>}/>
         <Route exact path="/Productos/editar/:id" element={<EditarProductos/>}/>
         <Route exact path="/ordenes" element={<ListarOrdenes/>}/>
+        <Route exact path="/carrito" element={<Carrito/>}/>
+        <Route exact path="/hacerOrden" element={<HacerOrden/>}/>
 
 
 

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { NumericFormat } from 'react-number-format';

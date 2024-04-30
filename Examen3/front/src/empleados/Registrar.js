@@ -6,7 +6,7 @@ export default function Registrar() {
 
     let navegacion = useNavigate();
 
-    localStorage.clear();
+    localStorage.setItem('token','');
 
     const [usuario, setUsuario] = useState({
         name:"",
