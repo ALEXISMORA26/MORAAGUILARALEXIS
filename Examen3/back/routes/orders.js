@@ -63,7 +63,7 @@ router.post('/', async (req,res)=>{
     order = await order.save();
 
     if(!order)
-    return res.status(400).send('the order cannot be created!')
+    return res.status(200).send('the order cannot be created!')
 
     res.send(order);
 })

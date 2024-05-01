@@ -27,14 +27,19 @@ export default function Acceder() {
         const urlBase = "http://localhost:3001/api/v1/users/login";
         const {data} = await axios.post(urlBase,usuario);
         localStorage.setItem("token",data.token);
-        console.log("console " + data.token)
+        // console.log("console " + data.token)
+        alert(data)
+        if(data === 'Credenciales errodeas!'){
+            navegacion('/acceder');
+        }else{
+          alert('registrado correctamente')
+          navegacion('/');
+        }
 
         // fetch(urlBase)
         // .then(response => response.json())
         // .then(data => localStorage.setItem("token",data.token))
         // .catch(error => console.log(error));
-        alert('registrado correctamente')
-        navegacion('/');
 
     }
 

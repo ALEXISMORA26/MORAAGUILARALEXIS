@@ -37,9 +37,15 @@ function App() {
 
       </Routes>
       </BrowserRouter>
+        <div>
 
+      <div class="text-center">
+    <h1 className="card-footer text-body-secondary fs-3">ALEXIS RICARDO MORA AGUILAR</h1>
+    <h1 className="card-footer text-body-secondary fs-3">JESUS ELIAS MARTINEZ JIMENEZ</h1>
+    <h1 className="card-footer text-body-secondary fs-3">RICARDO YAÑES MORALES</h1>
+  </div>
       
-      
+        </div>
     </div>
   );
 }

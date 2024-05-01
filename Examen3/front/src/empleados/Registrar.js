@@ -7,6 +7,33 @@ export default function Registrar() {
     let navegacion = useNavigate();
 
     localStorage.setItem('token','');
+    
+    const vaciarCarrito = async () => {
+      // const urlBase = "http://localhost:3001/api/v1/products";
+      let productosEnCarrito = localStorage.getItem("productos-en-carrito");
+      productosEnCarrito = JSON.parse(productosEnCarrito);
+      
+      productosEnCarrito.length = 0;
+      localStorage.setItem(
+        "productos-en-carrito",
+        JSON.stringify(productosEnCarrito)
+      );
+      
+      //
+      
+      let productosEnCarritoo = localStorage.getItem("pedido");
+      productosEnCarritoo = JSON.parse(productosEnCarritoo);
+      
+      productosEnCarritoo.length = 0;
+      localStorage.setItem("pedido", JSON.stringify(productosEnCarritoo));
+      
+      // await axios.delete(`${urlBase}/${id}`);
+      //    localStorage.clear();
+      // alert("Carrito eliminado correctamente");
+      // cargarProductos();
+      // navegacion("/");
+    };
+    vaciarCarrito();
 
     const [usuario, setUsuario] = useState({
         name:"",

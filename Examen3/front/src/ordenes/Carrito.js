@@ -100,14 +100,14 @@ export default function Carrito() {
       <div className="container text-center" style={{ margin: "30px" }}>
         <h3>Carrito</h3>
       </div>
-      <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-        <Link to="/hacerOrden" className=" btn btn-primary btn-sm ">
+      <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{margin: "20px"}}>
+        <Link to="/hacerOrden" className=" btn btn-primary  ">
           Hacer Pedido
         </Link>
         <button
           onClick={() => vaciarCarrito()}
           type="button"
-          className=" btn btn-danger btn-sm "
+          className=" btn btn-danger "
         >
           {" "}
           Vaciar CArrito

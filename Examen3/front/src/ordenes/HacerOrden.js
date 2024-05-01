@@ -41,7 +41,7 @@ export default function HacerOrden() {
 
         alert('pago exitoso')
         vaciarCarrito();
-        navegacion('/');
+        navegacion('/ordenes');
 
     }
 
@@ -86,32 +86,65 @@ export default function HacerOrden() {
             </div>
             <div className="mb-3">
                 <label htmlFor="shippingAddress2" className="form-label">Número Exterior</label>
-                <input type="text" className="form-control" id="shippingAddress2" name='shippingAddress2' 
+                <input type="number" className="form-control" id="shippingAddress2" name='shippingAddress2' required={true} 
                 onChange={(e)=>onInputChange(e)} value={shippingAddress2}/>
             </div>
 
             <div className="mb-3">
                 <label htmlFor="city" className="form-label">Ciudad</label>
-                <input type="text" className="form-control" id="city" name='city' 
+                <input type="text" className="form-control" id="city" name='city' required={true} 
                 onChange={(e)=>onInputChange(e)} value={city}/>
             </div>
 
             <div className="mb-3">
                 <label htmlFor="zip" className="form-label">CP</label>
-                <input type="text" className="form-control" id="zip" name='zip' 
-                onChange={(e)=>onInputChange(e)} value={zip}/>
+                <input type="number" className="form-control" id="zip" name='zip' required={true} 
+                onChange={(e)=>onInputChange(e)} value={zip} maxLength={5}/>
             </div>
 
             <div className="mb-3">
                 <label htmlFor="country" className="form-label">Pais</label>
-                <input type="text" className="form-control" id="country" name='country' 
+                <input type="text" className="form-control" id="country" name='country' required={true} 
                 onChange={(e)=>onInputChange(e)} value={country}/>
             </div>
 
             <div className="mb-3">
                 <label htmlFor="phone" className="form-label">Telefono</label>
-                <input type="text" className="form-control" id="phone" name='phone' 
+                <input type="number" className="form-control" id="phone" name='phone'required={true} 
                 onChange={(e)=>onInputChange(e)} value={phone}/>
+            </div>
+
+
+            {/*  */}
+
+            <div className="container text-center">
+                <label htmlFor="" className=" fs-1  ">Datos de la Tarjeta</label>
+                {/* <input type="text" className="form-control" id="" name='' required={true} 
+                /> */}
+            </div>
+
+            <div className="mb-3">
+                <label htmlFor="" className="form-label">Nombre del titular de la tarjeta</label>
+                <input type="text" className="form-control" id="" name='' required={true} 
+                />
+            </div>
+            <div className="mb-3">
+                <label htmlFor="" className="form-label">Numero de tarjeta</label>
+                <input type="" className="form-control" id="" name='' required={true} 
+                />
+            </div>
+
+
+            <div className="mb-3">
+                <label htmlFor="" className="form-label">Fecha de caducidad</label>
+                <input type="date" className="form-control" id="" name=''required={true} placeholder='ejemplo: 22-11-1111'
+               />
+            </div>
+
+            <div className="mb-3">
+                <label htmlFor="" className="form-label">CVV</label>
+                <input type="password" className="form-control" id="" name='' required={true} max={'999'}
+                />
             </div>
 
             {/* <div className="mb-3">
@@ -119,9 +152,9 @@ export default function HacerOrden() {
                 <input type="number" step="any" className="form-control" id="sueldo" name='sueldo' 
                 onChange={(e)=>onInputChange(e)} value={sueldo}/>
             </div> */}
-            <div className='text-center'>
-            <button  type="submit" className="btn btn-primary btn-sm me-3">Pagar</button>
-            <a href='/carrito' className='btn btn-danger btn-sm' >Regresar</a>
+            <div className='container text-center' style={{margin: "30px"}}>
+            <button  type="submit" className="btn btn-primary btn-lg me-3">Pagar</button>
+            <a href='/carrito' className='btn btn-danger btn-lg' >Regresar</a>
             </div>
         </form>
     </div>

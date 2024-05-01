@@ -87,7 +87,7 @@ router.post('/login', async (req,res) => {
        
         res.status(200).send({user: user.email , token: token}) 
     } else {
-       res.status(400).send('Credenciales errodeas!');
+       res.status(200).send('Credenciales errodeas!');
     }
 
     
@@ -126,9 +126,9 @@ if(pepe ){
 router.delete('/:id', (req, res)=>{
     User.findByIdAndRemove(req.params.id).then(user =>{
         if(user) {
-            return res.status(200).json({success: true, message: 'se bprro correctamante el usuario!'})
+            return res.status(200).json({success: true, message: 'se borro correctamante el usuario!'})
         } else {
-            return res.status(404).json({success: false , message: "usuario no encontrado!"})
+            return res.status(200).json({success: false , message: "usuario no encontrado!"})
         }
     }).catch(err=>{
        return res.status(500).json({success: false, error: err}) 
