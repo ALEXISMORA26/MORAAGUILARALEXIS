@@ -49,6 +49,15 @@ export default function ListarProductos() {
       <div className="container text-center" style={{ margin: "30px" }}>
         <h3>Productos</h3>
       </div>
+
+      <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{margin: "20px"}}>
+        <Link to="/agregarProductos" className=" btn btn-primary  ">
+          Agregar Producto
+        </Link>
+        
+        {/* <button onClick={() => eliminarProductos(Productos.id)} className="btn btn-danger btn-sm">Eliminar</button> */}
+      </div>
+
       <table className=" table table-striped table-hover align-middle">
         <thead className="table-dark">
           <tr>

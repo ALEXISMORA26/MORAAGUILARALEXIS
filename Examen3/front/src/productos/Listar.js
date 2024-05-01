@@ -149,7 +149,7 @@ export default function Listar() {
                     onClick={() => agregarCarrito(Productos.id,Productos.image,Productos.name,Productos.price)}
                     className="btn btn-primary btn-sm"
                   >
-                    Agregar
+                    Agregar al Carrito
                   </button>
                 </div>
               </td>

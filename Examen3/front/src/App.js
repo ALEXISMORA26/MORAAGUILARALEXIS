@@ -12,6 +12,7 @@ import EditarProductos from "./productos/EditarProductos";
 import Listar from "./productos/Listar";
 import Carrito from "./ordenes/Carrito";
 import HacerOrden from "./ordenes/HacerOrden";
+import AgregarEmpleado from "./empleados/AgregarEmpleado";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/registrar" element={<Registrar/>}/>
         <Route exact path="/admin" element={<ListadoEmpleados/>}/>
         <Route exact path="/editar/:id" element={<EditarEmpleados/>}/>
+        <Route exact path="/agregarProductos" element={<AgregarEmpleado/>}/>
         <Route exact path="/Productos" element={<ListarProductos/>}/>
         <Route exact path="/Productos/editar/:id" element={<EditarProductos/>}/>
         <Route exact path="/ordenes" element={<ListarOrdenes/>}/>

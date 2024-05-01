@@ -28,8 +28,9 @@ export default function Acceder() {
         const {data} = await axios.post(urlBase,usuario);
         localStorage.setItem("token",data.token);
         // console.log("console " + data.token)
-        alert(data)
+        // alert(data)
         if(data === 'Credenciales errodeas!'){
+          alert('Credenciales errodeas!')
             navegacion('/acceder');
         }else{
           alert('registrado correctamente')
